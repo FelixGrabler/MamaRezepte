@@ -1,2 +1,2 @@
 # MamaRezepte
-Rezepte der besten Mama.
+Rezepte der (zweit)besten Mama.
