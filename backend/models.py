@@ -6,8 +6,10 @@ db = SQLAlchemy()
 class Rezept(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     titel = db.Column(db.String, nullable=True)
+    anweisung = db.Column(db.String, nullable=True)
     hauptrezept_id = db.Column(db.Integer, db.ForeignKey("rezept.id"), nullable=True)
     zutaten = db.relationship("Zutat", backref="rezept", lazy=True)
+    schritte = db.relationship("RezeptSchritt", backref="rezept", lazy=True)
     bewertungen = db.relationship("Bewertung", backref="rezept", lazy=True)
     bilder = db.relationship("Bild", backref="rezept", lazy=True)
     tags = db.relationship(
@@ -28,7 +30,7 @@ class RezeptSchritt(db.Model):
 class Zutat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     rezept_id = db.Column(db.Integer, db.ForeignKey("rezept.id"), nullable=True)
-    menge = db.Column(db.Numeric, nullable=True)
+    menge = db.Column(db.String, nullable=True)
     einheit = db.Column(db.String, nullable=True)
     bezeichnung = db.Column(db.String, nullable=True)
 

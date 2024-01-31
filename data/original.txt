@@ -1,6 +1,6 @@
 Tropfteig
 
-3 dag Mehl
+30 g Mehl
 1 Ei
 2-3 Löffel Wasser
 Salz
@@ -10,7 +10,7 @@ Zutaten glatt verrühren. Den Teig in die kochende Suppe eintropfen lassen. Einm
 
 Omeletten
 
-36 dag Mehl
+360 g Mehl
 5 Eier
 ¾ l Milch
 1 EL Zucker
@@ -21,19 +21,19 @@ Zutaten glatt verrühren, etwas Teig in eine befettete Pfanne geben, gleichmäß
 
 Schmarren
 
-36 dag Mehl
+360 g Mehl
 6 Dotter
 ¾ l Milch
 6 Eiklar
-6 dag Zucker
-12 dag Rosinen
+60 g Zucker
+120 g Rosinen
 
 Mehl mit Salz, Milch und Dotter verrühren, Schnee mit Zucker ausschlagen und unterheben. Den Teig ca. 1 cm dick in eine befettete Pfanne gießen, anbacken, umdrehen, fertigbacken, mit zwei Gabeln zerreißen und mit Staubzucker bestreuen. Rosinen in Wasser weich kochen und dazu servieren.
 
 
 Spätzle
 
-30 dag Mehl
+300 g Mehl
 3 Eier
 1/8 l Wasser
 Salz
@@ -43,17 +43,17 @@ Die Zutaten verrühren, durch den Spätzlehobel in kochendes Salzwasser drücken
 
 Reisfleisch
 
-3 dag Fett
-10 dag Zwiebeln
-30 dag Schweinefleisch
-20 dag Reis
+30 g Fett
+100 g Zwiebeln
+300 g Schweinefleisch
+200 g Reis
 1 KL Paprika
 1 L Tomatenmark
 1 KL Essig
 ¾ l Suppe
 Salz, Majoran, Kümmel, Petersilie
 
-Feingehackte Zwiebeln und kleinwürfelig geschnittenes Schweinefleisch in heißem Fett gut anrösten, Reis kurz mitrösten, Paprika, Tomatenmark und Essig beigeben, mit Suppe aufgießen, aufkochen, würzen und zugedeckt ca. 30 min. dünsten lassen. Mit Petersilie bestreuen. 
+Feingehackte Zwiebeln und kleinwürfelig geschnittenes Schweinefleisch in heißem Fett gut anrösten, Reis kurz mitrösten, Paprika, Tomatenmark und Essig beigeben, mit Suppe aufgießen, aufkochen, würzen und zugedeckt ca. 30 min. dünsten lassen. Mit Petersilie bestreuen.
 
 
 Apfelnockerl
@@ -64,23 +64,23 @@ Apfelnockerl
 1 Ei
 Salz
 
-Zutaten mit der Küchenmaschine verrühren, mit dem Suppenlöffel in kochendes Salzwasser gleiten lassen, ca. 10 Minuten kochen lassen, abseihen und mit Wasser abschwemmen. 
+Zutaten mit der Küchenmaschine verrühren, mit dem Suppenlöffel in kochendes Salzwasser gleiten lassen, ca. 10 Minuten kochen lassen, abseihen und mit Wasser abschwemmen.
 In heißem Fett werden geschälte, blättrig geschnittene Äpfel lichtbraun geröstet. Mit Zucker, Zimt und den Nockerln vermischen.
 
 
 Apfelkrapferl
 
-18 dag Mehl
+180 g Mehl
 2 Dotter
 ¼ l Milch
 Prise Salz
-2 dag Zucker
+20 g Zucker
 1 Löffel Rum
 2 Eiklar
 
-Milchbackteig: Milch, Mehl, Dotter, Salz, Zucker und Rum verrühren. Den Schnee von 2 Eiklar unterheben. 
-Äpfel schälen, vom Kerngehäuse befreien und in ½ cm dicke Scheiben schneiden. Öl in einer Pfanne erhitzen, die Apfelscheiben in den Backteig tauchen und von beiden Seiten in etwa 4 min. goldgelb backen. Die Apfelkrapferl sollen sich während des Ausbackens nicht berühren. 
-Mit Staubzucker bestreut servieren. 
+Milchbackteig: Milch, Mehl, Dotter, Salz, Zucker und Rum verrühren. Den Schnee von 2 Eiklar unterheben.
+Äpfel schälen, vom Kerngehäuse befreien und in ½ cm dicke Scheiben schneiden. Öl in einer Pfanne erhitzen, die Apfelscheiben in den Backteig tauchen und von beiden Seiten in etwa 4 min. goldgelb backen. Die Apfelkrapferl sollen sich während des Ausbackens nicht berühren.
+Mit Staubzucker bestreut servieren.
 
 
 Bratäpfel mit Mandeln
@@ -131,7 +131,7 @@ Petersilie
 
 3-4 Erdäpfel kochen, schälen, zerdrücken, Salz, Ei, Mehl, Schinkenwürfel und Petersilie dazugeben. Laibchen formen. In heißem Öl goldbraun braten.
 
-Auch möglich: 20 dag Mehl, 5 dag Grieß nehmen.
+Auch möglich: 200 g Mehl, 50 g Grieß nehmen.
 
 
 Erdäpfelgulasch
@@ -154,7 +154,7 @@ Mehl mit 1/6 l Wasser versprudeln, dazugeben und noch ca. 5 min. auf niedriger F
 
 Erdäpfelsuppe
 
-40 dag Erdäpfel
+400 g Erdäpfel
 1 Zwiebel
 1 EL Butter
 1 l Suppe
@@ -167,8 +167,8 @@ Erdäpfel schälen und würfeln. Zwiebel und Knoblauch klein hacken, in Butter g
 
 Erdäpfelpüree
 
-70 dag mehlige Erdäpfel
-12 dag Butter
+700 g mehlige Erdäpfel
+120 g Butter
 100 ml Milch
 Salz, Muskatnuss
 
@@ -177,7 +177,7 @@ Erdäpfel schälen, in Stücke schneiden, in Salzwasser weich kochen, abseihen. 
 
 Erdäpfelsalat
 
-75 dag speckige Erdäpfel
+750 g speckige Erdäpfel
 ½ rote Zwiebel
 ¼ l Rindssuppe
 1 TL Senf
@@ -193,23 +193,30 @@ Tiroler Gröstl
 1 kg festkochende Erdäpfel
 1 Zwiebel
 Butter
-ca. 40 dag gebratenes Fleisch vom Vortag
+ca. 400 g gebratenes Fleisch vom Vortag
 Salz, Pfeffer, Majoran, Petersilie
 Öl
 
-Erdäpfel in Salzwasser nicht zu weich kochen, schälen, in Scheiben schneiden. In einer großen Pfanne Butter erhitzen, die gehackten Zwiebel anbraten. Erdäpfelscheiben zufügen und goldbraun braten. Majoran drüberstreuen. Hitze reduzieren und 3 EL Butter zugeben. 
+Erdäpfel in Salzwasser nicht zu weich kochen, schälen, in Scheiben schneiden. In einer großen Pfanne Butter erhitzen, die gehackten Zwiebel anbraten. Erdäpfelscheiben zufügen und goldbraun braten. Majoran drüberstreuen. Hitze reduzieren und 3 EL Butter zugeben.
 Fleischreste klein schneiden, dazugeben, mit Salz und Pfeffer abschmecken und Petersilie darüberstreuen.
 Wenn man frisches Fleisch verwendet, salzen und in einer zweiten Pfanne in Öl kräftig anrösten.
 
 
-Fleischbällchen Tomatensoße
+Fleischbällchen
 
-60 dag Faschiertes  500 g Tomaten oder 
-50 g Semmelwürfel 1 Zwiebel
-100 ml heiße Milch  250 ml Suppe
-1 Ei  Salz, Pfeffer, Thymian
-1 EL Basilikum  
+600 g Faschiertes
+50 g Semmelwürfel
+100 ml heiße Milch
+1 Ei
+1 EL Basilikum
 Salz, Pfeffer, Oregano
+
+Tomatensoße
+
+500 g Tomaten
+1 Zwiebel
+250 ml Suppe
+Salz, Pfeffer, Thymian
 
 Semmelwürfel mit heißer Milch vermischen und ziehen lassen. Faschiertes mit Salz, Pfeffer und Oregano würzen, mit Semmelwürfeln, Ei und Basilikum vermischen. Aus der Masse ca. 20 Kugeln formen. In Öl goldbraun braten.
 Tomatensoße:
@@ -240,20 +247,20 @@ Nusskraut
 Suppe
 Salz, Pfeffer
 
-Pro Person einen gehäuften EL Weizengrieß in Öl weißlich-gelb anrösten, 
+Pro Person einen gehäuften EL Weizengrieß in Öl weißlich-gelb anrösten,
 1 Liter Wasser und Nusskraut dazugeben, zwei Suppenwürfel und einen flachen TL Salz dazu. Aufkochen, dann ca. 10 min. köcheln lassen, mit Pfeffer abschmecken. Wer möchte, kann das Nusskraut entfernen.
 
 
 Gulasch
 
-40 dag Rindfleisch (Wadschinken)
+400 g Rindfleisch (Wadschinken)
 4 Zwiebel
 ½ l Suppe
 2 TL Paprikapulver
 1 Packerl Tomatensaft
 Salz, Pfeffer, Majoran, Lorbeerblatt
 
-Rindfleisch in 2-3 cm große Würfel schneiden. Mit Pfeffer und Salz bestreuen und 10 min. ruhen lassen. Zwiebel in Ringe schneiden und in Butter glasig braten. Das Fleisch zufügen und unter Wenden 5 min. gut anbraten, dann das Paprikapulver und die Gewürze aufs Fleisch streuen. Suppe erhitzen und mit dem Tomatensaft dazugeben. Deckel auflegen und das Gulasch in 60-90 min. weich kochen. Ab und zu prüfen, ob noch genug Flüssigkeit im Topf ist und wenn nötig ein wenig Suppe nachgießen.  
+Rindfleisch in 2-3 cm große Würfel schneiden. Mit Pfeffer und Salz bestreuen und 10 min. ruhen lassen. Zwiebel in Ringe schneiden und in Butter glasig braten. Das Fleisch zufügen und unter Wenden 5 min. gut anbraten, dann das Paprikapulver und die Gewürze aufs Fleisch streuen. Suppe erhitzen und mit dem Tomatensaft dazugeben. Deckel auflegen und das Gulasch in 60-90 min. weich kochen. Ab und zu prüfen, ob noch genug Flüssigkeit im Topf ist und wenn nötig ein wenig Suppe nachgießen.
 
 
 Gemüse einmachen
@@ -265,15 +272,15 @@ Einlegeessig und 1 TL Einlegekraut (gibt’s beides im Lagerhaus)
 Zucker
 
 Gewaschene Früchte mit Schalotten und Dillkräutl in Gläser mit Original-deckel schlichten. Einlegekräutl und ½ TL Zucker je Glas dazugeben. Einlegeessig über die Früchte gießen, bis alle bedeckt sind, zuschrauben.
-In einen großen Topf ein Tuch legen, darauf die Gläser stellen und mit Wasser anfüllen, bis die Gläser 1/3 von Wasser bedeckt sind. Aufkochen und 2 min. kochen lassen, anschließend von der Platte ziehen und zugedeckt auskühlen lassen. 
+In einen großen Topf ein Tuch legen, darauf die Gläser stellen und mit Wasser anfüllen, bis die Gläser 1/3 von Wasser bedeckt sind. Aufkochen und 2 min. kochen lassen, anschließend von der Platte ziehen und zugedeckt auskühlen lassen.
 Die Gläser sollten mindestens 14 Tage stehen, bevor sie geöffnet werden.
 
 
 Gurkensoße
 
-3 dag Butter
+30 g Butter
 2 Gurken
-3 dag Mehl
+30 g Mehl
 Suppe
 Sauerrahm oder Milch
 Salz, Pfeffer, Dill
@@ -283,14 +290,14 @@ Die geschälten, blättrig geschnittenen Gurken werden in heißer Butter weich g
 
 Schweinsgeschnetzeltes
 
-60 dag Schweinsfilet
+600 g Schweinsfilet
 2 Zwiebeln
 4 Zehen Knoblauch
 2 EL Öl
-5 dag Butter
+50 g Butter
 1 EL Mehl
 ¼ l Schlagobers
-¼ l Milch 
+¼ l Milch
 1 Würfel Bratensaft
 Salz, Pfeffer, Thymian
 
@@ -300,20 +307,20 @@ Im Bratrückstand die Zwiebel in Butter anschwitzen,  Mehl einrühren, Knoblauch
 
 Putengeschnetzeltes mit Pfefferrahmsoße
 
-60 dag Putenbrust
+600 g Putenbrust
 2 EL bunte Pfefferkörner
 1 Zwiebel
 3 EL Öl
 1/8 l Rotwein oder Wasser
-4 dag Mehl
+40 g Mehl
 1 Würfel Bratensaft
 ¼ l Schlagobers
 1 TL Petersilie
 Butter
 Salz
 
-In einer großen Pfanne Öl erhitzen. Fleisch salzen, im heißen Öl rundum kurz braten, aus der Pfanne heben und beiseitestellen. 
-Im Bratrückstand gehackte Zwiebel in 1 TL Butter anschwitzen, Pfefferkörner oder geriebenen Pfeffer dazugeben, Mehl, Bratensaftwürfel und Schlagobers. Wenn die Soße zu dick ist, Milch dazugeben. 2 min. köcheln lassen. 
+In einer großen Pfanne Öl erhitzen. Fleisch salzen, im heißen Öl rundum kurz braten, aus der Pfanne heben und beiseitestellen.
+Im Bratrückstand gehackte Zwiebel in 1 TL Butter anschwitzen, Pfefferkörner oder geriebenen Pfeffer dazugeben, Mehl, Bratensaftwürfel und Schlagobers. Wenn die Soße zu dick ist, Milch dazugeben. 2 min. köcheln lassen.
 Fleisch mit dem ausgetretenen Saft zugeben und kurz ziehen lassen.
 
 
@@ -337,7 +344,7 @@ Petersilie, Porree, Schalottenkraut, Knoblauchkraut
 Suppe
 Salz
 
-Kohlrabi abschälen und klein schneiden, mit Kräutern und Salz aufkochen, dann halb weich dünsten. Mit Mehl stauben und mit Suppe aufgießen. 
+Kohlrabi abschälen und klein schneiden, mit Kräutern und Salz aufkochen, dann halb weich dünsten. Mit Mehl stauben und mit Suppe aufgießen.
 Am Anfang kann man einen Erdäpfel hineinschneiden.
 
 
@@ -378,7 +385,7 @@ Krautsuppe
 1 Packerl Sauerrahm
 Salz, Pfeffer, Kümmel, Majoran, Essig, Petersilie
 
-Vom Krautkopf die äußeren Blätter entfernen. Kraut vierteln, Strunk ausschneiden, Kraut in sehr feine Streifen schneiden. 
+Vom Krautkopf die äußeren Blätter entfernen. Kraut vierteln, Strunk ausschneiden, Kraut in sehr feine Streifen schneiden.
 Zwiebel fein schneiden und in Butter anbraten. Kraut und gehackten Knoblauch zugeben und unter Rühren anrösten. Paprikapulver einrühren, Suppe zugießen und aufkochen. Würzen. Suppe auf kleiner Flamme ca. ½ Stunde köcheln, bis das Kraut weich ist. Pürieren, Sauerrahm einrühren und mit Petersilie bestreuen.
 
 
@@ -386,7 +393,7 @@ Knoblauchsuppe
 
 1 kleine Zwiebel
 5-10 Knoblauchzehen
-4 dag. Butter
+40 g. Butter
 Suppenwürfel
 Schwarzbrot
 
@@ -427,7 +434,7 @@ Lasagneblätter:
 
 1 EL Öl
 2-3 Zwiebeln
-50 dag Faschiertes
+500 g Faschiertes
 ½ Tube Tomatenmark
 1 Schuss Rum
 Oregano, Thymian, Salz
@@ -465,19 +472,19 @@ Marillenknödel
 
 2 Packerl Topfen (mager)
 2 Eier
-10 dag Mehl
-10 dag Grieß
+100 g Mehl
+100 g Grieß
 Salz
 
-Alle Zutaten gut vermischen und eine Dreiviertelstunde stehen lassen. 
+Alle Zutaten gut vermischen und eine Dreiviertelstunde stehen lassen.
 Finger in Mehl tauchen und Knödel formen.
 In kochendes Salzwasser geben und zurückschalten, das Wasser soll nicht zuviel sprudeln. Knödel sind fertig, wenn sie obenauf schwimmen.
 
-10 dag Butter
+100 g Butter
 1 Tasse Brösel
 2 EL Rum
 
-In einer Pfanne Butter zergehen lassen, Brösel hellbraun rösten, dabei ständig rühren. Wenn sie dunkel genug sind Rum dazugeben. 
+In einer Pfanne Butter zergehen lassen, Brösel hellbraun rösten, dabei ständig rühren. Wenn sie dunkel genug sind Rum dazugeben.
 
 
 Marmelade einkochen ohne Entsafter
@@ -485,20 +492,20 @@ Marmelade einkochen ohne Entsafter
 Erdbeeren, Marillen, Zwetschken …
 Gelierzucker (am besten 1:2 oder 1:3)
 
-Früchte mit ein paar Löffeln Wasser in einen Topf geben und aufkochen, danach ständig rühren, bis alle Früchte weich verkocht sind. Erdbeeren kann man auch vor dem Kochen mit der Hand zerdrücken. 
-Dann den Gelierzucker dazugeben und nochmals aufkochen lassen. 
-Ca. zehn Minuten kochen lassen, ständig umrühren und Schaum abschöpfen. 
+Früchte mit ein paar Löffeln Wasser in einen Topf geben und aufkochen, danach ständig rühren, bis alle Früchte weich verkocht sind. Erdbeeren kann man auch vor dem Kochen mit der Hand zerdrücken.
+Dann den Gelierzucker dazugeben und nochmals aufkochen lassen.
+Ca. zehn Minuten kochen lassen, ständig umrühren und Schaum abschöpfen.
 In gewaschene, mit Rum ausgespülte Gläser füllen, die auf feuchtem Tuch stehen. Gut zuschrauben.
 
 
 Marmelade einkochen mit dem Entsafter
 
 Früchte, geputzt oder gewaschen
-Gelierzucker 
+Gelierzucker
 
-Entsafter so aufstellen, dass es aus dem Schlauch abrinnen kann. In die unterste Kammer Wasser bis zur Rille hineinfüllen (dort wo der obere Topf aufsitzt) und während des Kochvorgangs gelegentlich Wasser nachfüllen, wenn schon viel verdampft ist. In den Sieb kommen die Früchte. Nach dem Schlauch soll der Saft noch durch ein feines Sieb rinnen, bevor er in einen zweiten Topf rinnt, der tiefer als der Entsafter steht. Das Ganze dauert über eine Stunde. Wenn die Früchte schon etwas verkocht sind, darf man mit einem Holzlöffel vorsichtig umrühren. 
+Entsafter so aufstellen, dass es aus dem Schlauch abrinnen kann. In die unterste Kammer Wasser bis zur Rille hineinfüllen (dort wo der obere Topf aufsitzt) und während des Kochvorgangs gelegentlich Wasser nachfüllen, wenn schon viel verdampft ist. In den Sieb kommen die Früchte. Nach dem Schlauch soll der Saft noch durch ein feines Sieb rinnen, bevor er in einen zweiten Topf rinnt, der tiefer als der Entsafter steht. Das Ganze dauert über eine Stunde. Wenn die Früchte schon etwas verkocht sind, darf man mit einem Holzlöffel vorsichtig umrühren.
 
-Danach wird Topf 2 auf den Herd gestellt und der Fruchtsaft aufgekocht. Erst jetzt kommen für jeden Liter Saft 1 kg Gelierzucker dazu. Immer gut umrühren. Mindestens fünf, am besten zehn Minuten wallend kochen lassen und nebenbei den Schaum abschöpfen. 
+Danach wird Topf 2 auf den Herd gestellt und der Fruchtsaft aufgekocht. Erst jetzt kommen für jeden Liter Saft 1 kg Gelierzucker dazu. Immer gut umrühren. Mindestens fünf, am besten zehn Minuten wallend kochen lassen und nebenbei den Schaum abschöpfen.
 Jetzt die Marmelade durch einen Trichter in Gläser füllen, die vorher gewaschen und mit Rum ausgespült worden sind. Die Gläser auf ein feuchtes Tuch stellen und immer nur kleinweise die Marmelade einfüllen. Den Schraubdeckel gut verschließen.
 
 
@@ -512,7 +519,7 @@ Salz, Pfeffer
 Salz, Basilikum
 
 Schnitzel mit Pfeffer und Paprikapulver einreiben, in heißer Butter von jeder Seite 3-4 Minuten braten. Fleisch herausnehmen, salzen und warm halten.
-Zwiebelwürfel im verbliebenen Fett glasig braten, Paprikastreifen dazu, Salz und viel Basilikum drüberstreuen. Bei mittlerer Hitze unter ständigem Rühren braten, bis der Paprika gar, aber noch knackig ist. 
+Zwiebelwürfel im verbliebenen Fett glasig braten, Paprikastreifen dazu, Salz und viel Basilikum drüberstreuen. Bei mittlerer Hitze unter ständigem Rühren braten, bis der Paprika gar, aber noch knackig ist.
 Dazu passen Petersilerdäpfel.
 
 
@@ -535,7 +542,7 @@ Topfennockerl mit Marillenröster
 2 Eier
 4 EL Sauerrahm
 2 EL Staubzucker
-10 dag Mehl
+100 g Mehl
 1 Prise Salz
 
 Topfen mit Eiern, Sauerrahm, Zucker, Mehl und Salz gut verrühren. Masse zugedeckt ca. eine Stunde im Kühlschrank rasten lassen.
@@ -543,9 +550,9 @@ Reichlich Salzwasser aufkochen lassen. Mit einem Löffel Nockerl aus der Topfenm
 
 Butterbrösel:
 
-15 dag Butter
-30 dag Semmelbrösel
-4 dag Kristallzucker
+150 g Butter
+300 g Semmelbrösel
+40 g Kristallzucker
 1 TL Vanillezucker oder Orangenzucker
 
 Butter erhitzen, Brösel und Zucker zugeben und unter Rühren goldgelb rösten.
@@ -554,7 +561,7 @@ Marillenröster:
 
 ½ kg Marillen
 1/16 Liter Wasser
-10 dag Kristallzucker
+100 g Kristallzucker
 Saft von einer Zitrone
 1 Prise Zimt
 
@@ -587,7 +594,7 @@ Pizzasoße: Tomaten oder Tomatensaft aus der Packung, Öl, Salz, Oregano.
 Alles pürieren und stehen lassen, damit die Kräuter ihren Geschmack entfalten können.
 
 Belag: Schinken, Zwiebel, Paprika, Tiefkühlgemüse (bissfest gekocht)...
-Darüber kommt Pizzakäse. 
+Darüber kommt Pizzakäse.
 Bei 200° im nicht vorgeheizten Backrohr 20 Minuten backen.
 
 
@@ -608,15 +615,15 @@ Salz, Pfeffer, Kümmelpulver, Rum
 1 TL Mehl
 
 Zwiebel klein schneiden und dünsten, Rindsschnitzel dazu, salzen und pfeffern, wenig Kümmelpulver dazu. Zugedeckt anrösten lassen, bis das Blut herauskommt. Nach ca. 15 Minuten das Fleisch umdrehen. Einen Schuss Rum (oder ½ Glasl Rotwein) und etwas Wasser dazugeben und bei größerer Hitze weiterdünsten lassen. Fleisch dabei immer wieder hin- und herschieben, damit es sich nicht an der Pfanne anlegt. 1 Suppenwürfel dazugeben und wenn nötig kleinweise etwas Wasser.
-Zehn Minuten vor Schluss mit Mehl stauben und Fleisch dann gleich umdrehen. 
+Zehn Minuten vor Schluss mit Mehl stauben und Fleisch dann gleich umdrehen.
 Spiralnudeln passen am besten dazu.
 
 
 Reisfleisch
 
-3 dag Fett
+30 g Fett
 2 Zwiebeln
-30 dag Schweinefleisch
+300 g Schweinefleisch
 1 Tasse Reis
 2 Tomaten
 1 Paprika
@@ -625,7 +632,7 @@ Reisfleisch
 ¾ l Suppe
 Salz, Majoran, Kümmel
 
-Feingehackte Zwiebeln und Fleisch in heißem Fett gut anrösten, Reis kurz mitrösten. Gemüse, Tomatenmark und Essig dazugeben, mit Suppe aufgießen. Aufkochen, würzen und zugedeckt 30 Minuten dünsten. 
+Feingehackte Zwiebeln und Fleisch in heißem Fett gut anrösten, Reis kurz mitrösten. Gemüse, Tomatenmark und Essig dazugeben, mit Suppe aufgießen. Aufkochen, würzen und zugedeckt 30 Minuten dünsten.
 Das Gemüse kann man auch weglassen und dafür Paprikapulver verwenden.
 
 
@@ -633,14 +640,14 @@ Spaghettisoße
 
 1 EL Öl
 2 Zwiebel
-50-60 dag Faschiertes
+50-600 g Faschiertes
 2 EL Paprikapulver
 2 EL Essig
 2 Zehen Knoblauch
 Salz, Pfeffer, Majoran, Thymian, Oregano
 ½ Tube Tomatenmark + Wasser oder 2 Packerl Tomatensaft
 
-Gehackte Zwiebel glasig dünsten, Faschiertes dazugeben und anrösten, bis alles braun ist. Gewürze dazu und ca. 10 Minuten köcheln lassen, dabei öfters umrühren. 
+Gehackte Zwiebel glasig dünsten, Faschiertes dazugeben und anrösten, bis alles braun ist. Gewürze dazu und ca. 10 Minuten köcheln lassen, dabei öfters umrühren.
 Am besten schmeckt die Soße allerdings, wenn man sie eine Stunde lang kochen lässt.
 
 
@@ -654,7 +661,7 @@ Möhren, Sellerie, Petersilwurzel…
 Suppennudeln
 Salz, Pfeffer, Muskat, Schnittlauch
 
-Suppe aufkochen lassen, Gemüse und Fleisch dazugeben, Essig dazu und bei mittlerer Hitze ca. 30 Minuten köcheln lassen. Suppennudeln dazugeben und weitere fünf Minuten kochen lassen. Würzen, mit Schnittlauch bestreut servieren. Man kann die Nudeln auch extra kochen. Besonders würzig wird die Suppe mit ein paar Blättern Liebstöckl. Der Essig macht das Suppenfleisch zart. 
+Suppe aufkochen lassen, Gemüse und Fleisch dazugeben, Essig dazu und bei mittlerer Hitze ca. 30 Minuten köcheln lassen. Suppennudeln dazugeben und weitere fünf Minuten kochen lassen. Würzen, mit Schnittlauch bestreut servieren. Man kann die Nudeln auch extra kochen. Besonders würzig wird die Suppe mit ein paar Blättern Liebstöckl. Der Essig macht das Suppenfleisch zart.
 
 
 Erbsensuppe mit Würsterl
@@ -668,7 +675,7 @@ Erbsensuppe mit Würsterl
 2 Paar Frankfurter
 Salz, Pfeffer, Muskatnuss
 
-Zwiebel und Erbsen in Butter anschwitzen, Mehl einrühren und kurz mitrösten. Mit Suppe und Milch aufgießen und ca. 12 Minuten köcheln lassen. Mit dem Stabmixer pürieren, mit Salz, Pfeffer und Muskatnuss würzen. 
+Zwiebel und Erbsen in Butter anschwitzen, Mehl einrühren und kurz mitrösten. Mit Suppe und Milch aufgießen und ca. 12 Minuten köcheln lassen. Mit dem Stabmixer pürieren, mit Salz, Pfeffer und Muskatnuss würzen.
 Gekochte Frankfurter in Scheiben schneiden und dazugeben. Es passen aber auch geröstete Brotwürfel dazu.
 
 
@@ -683,10 +690,10 @@ Salz, Pfeffer, Paprikapulver, Tomatenmark, Kümmel
 1 Suppenwürfel
 1 EL Mehl
 
-Zwiebeln fein hacken und in Butter oder Schmalz glasig dünsten. Das Fleisch darin anbraten. Mit Salz, Pfeffer, Tomatenmark, Kümmel und fein gehacktem Knoblauch würzen. Paprikapulver drüberstreuen, mit Suppe aufgießen und eine knappe Stunde bei wenig Hitze dünsten lassen. 
-Das klein geschnittene Sauerkraut dazugeben und eine weitere halbe Stunde köcheln lassen. 
-Sauerrahm mit Mehl verrühren und kurz vor Ende der Kochzeit zum Gulasch geben. 
-Semmelknödel oder Erdäpfel passen dazu. 
+Zwiebeln fein hacken und in Butter oder Schmalz glasig dünsten. Das Fleisch darin anbraten. Mit Salz, Pfeffer, Tomatenmark, Kümmel und fein gehacktem Knoblauch würzen. Paprikapulver drüberstreuen, mit Suppe aufgießen und eine knappe Stunde bei wenig Hitze dünsten lassen.
+Das klein geschnittene Sauerkraut dazugeben und eine weitere halbe Stunde köcheln lassen.
+Sauerrahm mit Mehl verrühren und kurz vor Ende der Kochzeit zum Gulasch geben.
+Semmelknödel oder Erdäpfel passen dazu.
 
 
 Minestrone
@@ -721,7 +728,7 @@ Knoblauch
 Salz, Pfeffer, Majoran, Kümmel
 Öl, Suppe
 
-Backrohr auf 200° vorheizen. Zwiebel in Stücke schneiden, Erdäpfel vierteln. 
+Backrohr auf 200° vorheizen. Zwiebel in Stücke schneiden, Erdäpfel vierteln.
 Fleisch mit Salz, Pfeffer, Majoran, Kümmel und zerdrücktem Knoblauch rundum einreiben.
 
 In einem hohen Kochtopf das Fleisch in Öl kurz rundum anbraten, danach den Braten in eine große Auflaufform geben, Erdäpfel und Zwiebel dazugeben, mit Suppe aufgießen und im Backrohr bei 200°C mindestens eine Stunde braten. Während des Bratens immer wieder mit der Suppe übergießen.
@@ -738,7 +745,7 @@ Salz, Pfeffer
 1 Tasse Reis
 
 Zwiebel glasig dünsten, Mehl dazu und rühren, bis es sich färbt (Einbrenn). Tomaten und Wasser dazu, Suppenwürfel, Salz, Pfeffer, Zucker. Fünf Minuten kochen lassen, pürieren.
-Reis extra kochen (ohne Salz). 
+Reis extra kochen (ohne Salz).
 
 
 Tomatensoße
@@ -778,7 +785,7 @@ Mehl
 
 Spätzle in Salzwasser kochen, abseihen, in Auflaufform geben, Käse dazumischen und im Rohr überbacken, bis der Käse geschmolzen ist.
 Mit Pfeffer und Schnittlauch abschmecken.
-Zwiebel in Ringe schneiden, mit Küchenrolle so gut es geht trockentupfen. 
+Zwiebel in Ringe schneiden, mit Küchenrolle so gut es geht trockentupfen.
 In einem Teller Mehl wenden und in heißem Öl frittieren. Abtropfen lassen und zu den Käsespätzle servieren.
 
 
@@ -792,9 +799,9 @@ Zucchinicremesuppe
 3 EL Mehl
 Salz, Kümmelpulver, Essig, Petersilie, Pfeffer
 
-Wasser erwärmen, dabei einen Erdäpfel ganz fein hineinschneiden. Zucchiniwürfel ins kochende Wasser geben, Salz, Kümmel, Suppenwürfel, 
-feinwürfeligen Knoblauch dazu. Kochen lassen, bis alles weich ist. 
-Mit Pürierstab mixen. 
+Wasser erwärmen, dabei einen Erdäpfel ganz fein hineinschneiden. Zucchiniwürfel ins kochende Wasser geben, Salz, Kümmel, Suppenwürfel,
+feinwürfeligen Knoblauch dazu. Kochen lassen, bis alles weich ist.
+Mit Pürierstab mixen.
 Sauerrahm mit 1/8 l Wasser und Mehl versprudeln, bis keine Knöpfe mehr zu sehen sind. In Suppe geben, 1 Schuss Essig dazu. Noch fünf Minuten kochen. Petersilie und Pfeffer unterrühren, mit Brotwürfeln servieren.
 
 
@@ -822,33 +829,33 @@ Salz, Pfeffer, Oregano, Basilikum
 Öl
 
 Zucchini der Länge nach halbieren, mit einem kleinen Löffel aushöhlen und an den Unterseiten ein wenig abflachen. Öl erhitzen, Zwiebelwürfel anschwitzen, Faschiertes, Paprika- und Zucchinistücke dazugeben und gut anrösten. Mit etwas Wasser verdünnen. Tomatenmark, Salz, Pfeffer, Oregano und Knoblauch unterrühren und wenige Minuten kochen.
-Backrohr auf 200°C vorheizen. Die Zucchinihälften auf ein Backblech legen und mit der Fülle belegen. Obenauf kommen Schafkäse-Würfel und Tomaten-Würfel sowie etwas Basilikum. Im vorgeheizten Rohr, untere Schiene, zwölf Minuten garen. 
+Backrohr auf 200°C vorheizen. Die Zucchinihälften auf ein Backblech legen und mit der Fülle belegen. Obenauf kommen Schafkäse-Würfel und Tomaten-Würfel sowie etwas Basilikum. Im vorgeheizten Rohr, untere Schiene, zwölf Minuten garen.
 
 
 Grießnockerlsuppe
 
-4 dag Butter
+40 g Butter
 1 Ei
-11 dag Grieß
+110 g Grieß
 Salz, Muskat
 1 l Suppe
 
-Die Butter wird in einem Suppenteller mit einer Gabel flaumig gerührt. 
+Die Butter wird in einem Suppenteller mit einer Gabel flaumig gerührt.
 Ei, Grieß, Salz und Muskatnuß unterrühren, bis eine weiche Masse entsteht. 10 Minuten ziehen lassen. Dann formt man aus der Masse mit einem Löffel Nockerl, die man in der Suppe 15 Minuten kochen lässt.
 
 
 Grießschmarren
 
-6 dag Butter
-36 dag Grieß
-6 dag Zucker
+60 g Butter
+360 g Grieß
+60 g Zucker
 ¾ l Milch
-6 dag Rosinen
+60 g Rosinen
 Salz
 
 Milch mit Salz und Butter aufkochen, Grieß unter ständigem Rühren einlaufen lassen, aufkochen, Zucker einrühren und 20 Minuten quellen lassen.
 Rosinen in einem extra Gefäß in Wasser-Rum-Mischung wenige Minuten kochen lassen, bis sie weich sind. Nach Geschmack dazureichen.
-Man kann weniger Zucker dazugeben und dafür ein Packerl Orangenzucker unterrühren. 
+Man kann weniger Zucker dazugeben und dafür ein Packerl Orangenzucker unterrühren.
 
 
 Grenadiermarsch
@@ -866,7 +873,7 @@ Zwiebelwürfel kräftig anrösten, Erdäpfel mitrösten, würfelig geschnittene 
 
 Eintropfsuppe
 
-6 dag Mehl
+60 g Mehl
 1 Ei
 1/16 l Wasser
 Salz
@@ -898,7 +905,7 @@ Gefüllte Paprika
 Salz, Pfeffer, Petersilie, Basilikum
 Öl
 
-Paprika waschen, obere Kappe mit dem Stiel abschneiden, Zwischenwände und Kerne entfernen. Zwiebel in Würfel schneiden und dünsten, Reis dünsten. Mit Faschiertem, Salz, Pfeffer, Petersilie vermischen. Die Paprika damit füllen und in eine Auflaufform setzen. 
+Paprika waschen, obere Kappe mit dem Stiel abschneiden, Zwischenwände und Kerne entfernen. Zwiebel in Würfel schneiden und dünsten, Reis dünsten. Mit Faschiertem, Salz, Pfeffer, Petersilie vermischen. Die Paprika damit füllen und in eine Auflaufform setzen.
 Passierte Tomaten mit Salz, Basilikum und Zucker vermischen und dazugießen. Im Rohr 50 Minuten dünsten.
 
 
@@ -934,16 +941,16 @@ Bei 200°C ungefähr 30 Minuten backen und mit Schlagsahne servieren.
 
 Vanillekipferl
 
-28 dag Mehl
-21 dag Butter
-7 dag Zucker
-10 dag Nüsse (keine Haselnüsse)
+280 g Mehl
+210 g Butter
+70 g Zucker
+100 g Nüsse (keine Haselnüsse)
 
 Zum Wälzen:
-10 dag Staubzucker
+100 g Staubzucker
 1 Pkg. Vanillezucker
 
-Zutaten vermischen, zwei Stunden kaltstellen und dann bei 175°C 
+Zutaten vermischen, zwei Stunden kaltstellen und dann bei 175°C
 ca. 10 Minuten backen. Am Blech einige Minuten auskühlen lassen, danach in der Zuckermischung drehen.
 
 
@@ -968,16 +975,16 @@ Biskotten in Rum-Kaffee tunken und mit der Creme schichtweise in eine Form geben
 
 Rumschnitten
 
-25 dag Mehl
-25 dag Zucker
-25 dag Butter
-25 dag Schokolade
+250 g Mehl
+250 g Zucker
+250 g Butter
+250 g Schokolade
 6 Eier
 1 Pkg. Vanillezucker
 
 Glasur:
 1/8 l Rum
-30 dag Staubzucker
+300 g Staubzucker
 
 Butter schaumig rühren, abwechselnd Dotter und Zucker beimengen, dann geriebene Schokolade, Eischnee und Mehl unterheben.
 Den Teig auf ein befettetes Blech ca. 2 cm dick aufstreichen und im Rohr bei 200°C ca. 25 Minuten backen. Mit Rumglasur überziehen.
@@ -1000,11 +1007,11 @@ Kleine Kugeln formen (etwa 2-3 cm dick) und in Kokosflocken wälzen.
 
 Lebkuchen
 
-20 dag Zucker
-25 dag Honig
-10 dag Butter
+200 g Zucker
+250 g Honig
+100 g Butter
 4 Eier
-50 dag Roggenmehl
+500 g Roggenmehl
 1 TL Natron
 1 Pkg. Lebkuchengewürz
 
@@ -1015,18 +1022,18 @@ Zucker, Honig, Butter und Eier leicht erwärmen und schaumig rühren. Restliche 
 Germteigkrampus
 
 2 Eier (zimmerwarm)
-10 dag Butter (zimmerwarm)
+100 g Butter (zimmerwarm)
 2 Pkg. Trockengerm
 ¼ l lauwarme Milch
-60 dag Mehl (griffig)
-10 dag Feinkristallzucker
+600 g Mehl (griffig)
+100 g Feinkristallzucker
 1 Pkg. Vanillezucker
 Rosinen für Augen und Knöpfe
 1 Ei zum Bestreichen
 Rote Dreiecke aus Papier für die Krampuszunge
 
 Eier schaumig schlagen und warme Butter dazugeben. Trockengerm in Zucker und Milch auflösen, Mehl dazugeben und mit der Eier-Buttermasse lange verrühren.
-Germteig zugedeckt an einem warmen Ort gehen lassen. Dann die Masse in sechs Stücke teilen und Krampusse formen. Rosinen platzieren und nochmals gehen lassen. Mit Ei bestreichen, Krampuszungen andrücken und im vorgeheizten Rohr bei 200°C ca. zwanzig Minuten backen. 
+Germteig zugedeckt an einem warmen Ort gehen lassen. Dann die Masse in sechs Stücke teilen und Krampusse formen. Rosinen platzieren und nochmals gehen lassen. Mit Ei bestreichen, Krampuszungen andrücken und im vorgeheizten Rohr bei 200°C ca. zwanzig Minuten backen.
 
 Germteig – so gelingt er
 
@@ -1057,18 +1064,18 @@ Den abgekühlten Kuchen mit Staubzucker bestreuen.
 
 Schneeflocken-Torte
 
-6 dag Kokosflocken
-10 dag Butter
-5 dag Staubzucker
+60 g Kokosflocken
+100 g Butter
+50 g Staubzucker
 1 Pkg. Vanillezucker
 1 Prise Salz
 4 Dotter
-8 dag Mehl (griffig)
+80 g Mehl (griffig)
 4 Eiklar
-5 dag Kristallzucker
+50 g Kristallzucker
 
 Füllung:
-6 dag Marmelade
+60 g Marmelade
 2 Pkg. Schlagobers
 2 Pkg. Sahnesteif
 
@@ -1112,12 +1119,12 @@ Gugelhupf aus dem Rohr nehmen, ca. fünf Minuten rasten lassen, aus der Form st�
 Marmor-Gugelhupf
 
 6 Eier
-30 dag Butter
-6 dag Staubzucker
+300 g Butter
+60 g Staubzucker
 Schale von ½ Zitrone
 1 Pkg. Vanillezucker
-20 dag Kristallzucker
-30 dag Mehl (glatt)
+200 g Kristallzucker
+300 g Mehl (glatt)
 1 EL Kakaopulver
 2 EL Öl
 Salz

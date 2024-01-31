@@ -1,0 +1,1158 @@
+[
+    {
+        "title": "Tropfteig",
+        "ingredients": [
+            "30_g_Mehl",
+            "1__Ei",
+            "2-3_Löffel_Wasser",
+            "__Salz"
+        ],
+        "instructions": "Zutaten glatt verrühren. Den Teig in die kochende Suppe eintropfen lassen. Einmal aufkochen lassen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Omeletten",
+        "ingredients": [
+            "360_g_Mehl",
+            "5__Eier",
+            "¾_l_Milch",
+            "1_EL_Zucker",
+            "__Salz"
+        ],
+        "instructions": "Zutaten glatt verrühren, etwas Teig in eine befettete Pfanne geben, gleichmäßig dünn verteilen und beidseitig backen. Zwischen jeder Omelette die Pfanne neu einfetten.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Schmarren",
+        "ingredients": [
+            "360_g_Mehl",
+            "6__Dotter",
+            "¾_l_Milch",
+            "6__Eiklar",
+            "60_g_Zucker",
+            "120_g_Rosinen"
+        ],
+        "instructions": "Mehl mit Salz, Milch und Dotter verrühren, Schnee mit Zucker ausschlagen und unterheben. Den Teig ca. 1 cm dick in eine befettete Pfanne gießen, anbacken, umdrehen, fertigbacken, mit zwei Gabeln zerreißen und mit Staubzucker bestreuen. Rosinen in Wasser weich kochen und dazu servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Spätzle",
+        "ingredients": [
+            "300_g_Mehl",
+            "3__Eier",
+            "1/8_l_Wasser",
+            "__Salz"
+        ],
+        "instructions": "Die Zutaten verrühren, durch den Spätzlehobel in kochendes Salzwasser drücken, aufkochen und abseihen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Reisfleisch",
+        "ingredients": [
+            "30_g_Fett",
+            "100_g_Zwiebeln",
+            "300_g_Schweinefleisch",
+            "200_g_Reis",
+            "1_KL_Paprika",
+            "1_L_Tomatenmark",
+            "1_KL_Essig",
+            "¾_l_Suppe",
+            "__Salz, Majoran, Kümmel, Petersilie"
+        ],
+        "instructions": "Feingehackte Zwiebeln und kleinwürfelig geschnittenes Schweinefleisch in heißem Fett gut anrösten, Reis kurz mitrösten, Paprika, Tomatenmark und Essig beigeben, mit Suppe aufgießen, aufkochen, würzen und zugedeckt ca. 30 min. dünsten lassen. Mit Petersilie bestreuen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Apfelnockerl",
+        "ingredients": [
+            "¼_kg_Mehl",
+            "1/8_l_Milch",
+            "1_Becher_Schlagobers",
+            "1__Ei",
+            "__Salz"
+        ],
+        "instructions": "Zutaten mit der Küchenmaschine verrühren, mit dem Suppenlöffel in kochendes Salzwasser gleiten lassen, ca. 10 Minuten kochen lassen, abseihen und mit Wasser abschwemmen.\nIn heißem Fett werden geschälte, blättrig geschnittene Äpfel lichtbraun geröstet. Mit Zucker, Zimt und den Nockerln vermischen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Apfelkrapferl",
+        "ingredients": [
+            "180_g_Mehl",
+            "2__Dotter",
+            "¼_l_Milch",
+            "Prise__Salz",
+            "20_g_Zucker",
+            "1_Löffel_Rum",
+            "2__Eiklar"
+        ],
+        "instructions": "Milchbackteig: Milch, Mehl, Dotter, Salz, Zucker und Rum verrühren. Den Schnee von 2 Eiklar unterheben.\nÄpfel schälen, vom Kerngehäuse befreien und in ½ cm dicke Scheiben schneiden. Öl in einer Pfanne erhitzen, die Apfelscheiben in den Backteig tauchen und von beiden Seiten in etwa 4 min. goldgelb backen. Die Apfelkrapferl sollen sich während des Ausbackens nicht berühren.\nMit Staubzucker bestreut servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Bratäpfel mit Mandeln",
+        "ingredients": [
+            "4_große_Äpfel",
+            "50_g_gehackte Mandeln",
+            "½_TL_Zimt",
+            "50_g_Rosinen",
+            "__Butter",
+            "__Zucker"
+        ],
+        "instructions": "Vier große Äpfel waschen, Kerngehäuse entfernen. Mandeln und Zimt vermischen, Rosinen in Wasser weich kochen, abtropfen lassen und dazugeben. Wenig Butter in einen Topf geben, die Äpfel hineinsetzen und jedes Kernhausloch mit der Rosinenmischung füllen. Auf jeden Apfel kommen ein Butterstück und etwas Zucker.\nBei mittlerer Hitze unter geschlossenem Deckel etwa 20 min. braten.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Bratäpfel mit Haselnüssen",
+        "ingredients": [
+            "4_große_Äpfel",
+            "4_EL_gemahlene Haselnüsse",
+            "1_½_EL Zucker",
+            "1_EL_Zitronensaft",
+            "1_EL_Sauerrahm",
+            "1_EL_Rosinen",
+            "10_g_Butter",
+            "200_ml_Wasser"
+        ],
+        "instructions": "Äpfel waschen und Kerngehäuse entfernen. Nüsse, Zucker, Zitronensaft, Sauerrahm und Rosinen vermischen und die Äpfel damit füllen, oben drauf kommt die Butter. Die Äpfel in eine Auflaufform setzen. Die Form mit Wasser füllen, im Backrohr ca. 30 min. bei 180 Grad garen. Dazu schmeckt Vanillesauce oder Schlag.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Fisolen - Bohnenschoten",
+        "ingredients": [
+            "__TODO"
+        ],
+        "instructions": "Ein gefrorenes Packerl Bohnen in kochendes Salzwasser geben, ca. ½ Stunde kochen lassen, abtropfen lassen. Schmeckt am besten noch warm mit Essig.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Blutwurst",
+        "ingredients": [
+            "__TODO"
+        ],
+        "instructions": "Backrohr auf 180 Grad vorheizen, fünf Erdäpfel vierteln, zusammen mit Blutwürsteln, Öl und 5 EL Wasser in Auflaufform geben. Nach 40 min. Würstel umdrehen und Knoblauch dazugeben, dann in 20-30 min. fertigbraten. Grillgewürz über die Erdäpfel geben.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erdäpfellaibchen",
+        "ingredients": [
+            "3-4__Erdäpfel",
+            "1_TL_Salz",
+            "1__Ei",
+            "2_gehäufte_EL griffiges Mehl",
+            "__Schinkenwürfel",
+            "__Petersilie"
+        ],
+        "instructions": "3-4 Erdäpfel kochen, schälen, zerdrücken, Salz, Ei, Mehl, Schinkenwürfel und Petersilie dazugeben. Laibchen formen. In heißem Öl goldbraun braten.\nAuch möglich: 200 g Mehl, 50 g Grieß nehmen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erdäpfelgulasch",
+        "ingredients": [
+            "2__Zwiebel",
+            "6__Erdäpfel",
+            "2_EL_Paprikapulver",
+            "½_EL_Kümmelpulver",
+            "3__Knoblauchzehen",
+            "1_TL_Majoran",
+            "1__Lorbeerblatt",
+            "__Salz",
+            "1__Braunschweiger",
+            "3_EL_Mehl",
+            "__Essig"
+        ],
+        "instructions": "Zwiebel in Fett glasig dünsten, würfelig geschnittene Erdäpfel dazugeben, anrösten lassen, dann ca. ¾ l Wasser dazu. Paprikapulver, Kümmel, Salz, Knoblauch, Majoran und Lorbeerblatt dazu. Kochen lassen, bis die Erdäpfel halb weich sind. Würfelig geschnittene Braunschweiger dazu und zugedeckt 5 min. weiterkochen lassen.\nMehl mit 1/6 l Wasser versprudeln, dazugeben und noch ca. 5 min. auf niedriger Flamme weiterkochen lassen, zuletzt 1 Schuss Essig dazu.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erdäpfelsuppe",
+        "ingredients": [
+            "400_g_Erdäpfel",
+            "1__Zwiebel",
+            "1_EL_Butter",
+            "1_l_Suppe",
+            "1/8_l_Schlagobers",
+            "1_Zehe_Knoblauch",
+            "__Salz, Pfeffer, Muskatnuss"
+        ],
+        "instructions": "Erdäpfel schälen und würfeln. Zwiebel und Knoblauch klein hacken, in Butter glasig anschwitzen und mit Suppe aufgießen. Erdäpfelwürfel dazugeben und weich kochen. Danach pürieren, Schlag einrühren, mit Salz, Pfeffer und Muskatnuss abschmecken.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erdäpfelpüree",
+        "ingredients": [
+            "700_g_mehlige Erdäpfel",
+            "120_g_Butter",
+            "100_ml_Milch",
+            "__Salz, Muskatnuss"
+        ],
+        "instructions": "Erdäpfel schälen, in Stücke schneiden, in Salzwasser weich kochen, abseihen. Butter und Milch erhitzen, zerdrückte Erdäpfel dazugeben, mit Salz und Muskatnuss würzen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erdäpfelsalat",
+        "ingredients": [
+            "750_g_speckige Erdäpfel",
+            "½_rote_Zwiebel",
+            "¼_l_Rindssuppe",
+            "1_TL_Senf",
+            "5_EL_Essig",
+            "__Salz, Pfeffer"
+        ],
+        "instructions": "Erdäpfel bissfest kochen, abseihen und zugedeckt ausdampfen lassen. Rote Zwiebel kleinwürfelig schneiden, mit warmer Rindssuppe, Senf, Essig, Salz und Pfeffer mischen. Zuletzt 80 ml Sonnenblumenöl dazugeben.\nErdäpfel schälen, in ½ cm dicke Scheiben schneiden, in die Marinade legen und behutsam mischen. Salat zugedeckt ca. 30 min. ziehen lassen, mit Schnittlauch bestreut servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Tiroler Gröstl",
+        "ingredients": [
+            "1_kg_festkochende Erdäpfel",
+            "1__Zwiebel",
+            "__Butter",
+            "ca._400_g gebratenes Fleisch vom Vortag",
+            "__Salz, Pfeffer, Majoran, Petersilie",
+            "__Öl"
+        ],
+        "instructions": "Erdäpfel in Salzwasser nicht zu weich kochen, schälen, in Scheiben schneiden. In einer großen Pfanne Butter erhitzen, die gehackten Zwiebel anbraten. Erdäpfelscheiben zufügen und goldbraun braten. Majoran drüberstreuen. Hitze reduzieren und 3 EL Butter zugeben.\nFleischreste klein schneiden, dazugeben, mit Salz und Pfeffer abschmecken und Petersilie darüberstreuen.\nWenn man frisches Fleisch verwendet, salzen und in einer zweiten Pfanne in Öl kräftig anrösten.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Fleischbällchen",
+        "ingredients": [
+            "600_g_Faschiertes",
+            "50_g_Semmelwürfel",
+            "100_ml_heiße Milch",
+            "1__Ei",
+            "1_EL_Basilikum",
+            "__Salz, Pfeffer, Oregano"
+        ],
+        "instructions": "Semmelwürfel mit heißer Milch vermischen und ziehen lassen. Faschiertes mit Salz, Pfeffer und Oregano würzen, mit Semmelwürfeln, Ei und Basilikum vermischen. Aus der Masse ca. 20 Kugeln formen. In Öl goldbraun braten.\nTomatensoße:\nZwiebel hacken und in 3 EL Öl anschwitzen. Tomaten zugeben, mit Suppe aufgießen, ca. 20 min. köcheln lassen. Mit dem Stabmixer pürieren und würzen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Tomatensoße",
+        "ingredients": [
+            "500_g_Tomaten",
+            "1__Zwiebel",
+            "250_ml_Suppe",
+            "__Salz, Pfeffer, Thymian"
+        ],
+        "instructions": "",
+        "parent_recipe": "Fleischbällchen"
+    },
+    {
+        "title": "Getreidelaibchen",
+        "ingredients": [
+            "150_g_Getreideflocken",
+            "75_g_Hafermark",
+            "10_TL_Mehl",
+            "¼_l_Suppe",
+            "1__Zwiebel",
+            "2__Eiklar",
+            "2_TL_Petersilie",
+            "__Salz, Zimt, Pfeffer"
+        ],
+        "instructions": "Getreideflocken, Hafermark und Mehl vermischen, mit der warmen Suppe übergießen und 5 min. stehen lassen.\nZwiebel in Öl anrösten, danach mit den Gewürzen zur Flockenmasse geben und gut durchmischen. Man kann noch Sesamkörner, Möhren, Erbsen… dazugeben.\nIn Öl bei mittlerer Hitze hellbraun backen.\nDie fertigen Laibchen sind auch als kalte Jause geeignet.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Grießsuppe",
+        "ingredients": [
+            "__Grieß",
+            "__Nusskraut",
+            "__Suppe",
+            "__Salz, Pfeffer"
+        ],
+        "instructions": "Pro Person einen gehäuften EL Weizengrieß in Öl weißlich-gelb anrösten,\n1 Liter Wasser und Nusskraut dazugeben, zwei Suppenwürfel und einen flachen TL Salz dazu. Aufkochen, dann ca. 10 min. köcheln lassen, mit Pfeffer abschmecken. Wer möchte, kann das Nusskraut entfernen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Gulasch",
+        "ingredients": [
+            "400_g_Rindfleisch (Wadschinken)",
+            "4__Zwiebel",
+            "½_l_Suppe",
+            "2_TL_Paprikapulver",
+            "1_Packerl_Tomatensaft",
+            "__Salz, Pfeffer, Majoran, Lorbeerblatt"
+        ],
+        "instructions": "Rindfleisch in 2-3 cm große Würfel schneiden. Mit Pfeffer und Salz bestreuen und 10 min. ruhen lassen. Zwiebel in Ringe schneiden und in Butter glasig braten. Das Fleisch zufügen und unter Wenden 5 min. gut anbraten, dann das Paprikapulver und die Gewürze aufs Fleisch streuen. Suppe erhitzen und mit dem Tomatensaft dazugeben. Deckel auflegen und das Gulasch in 60-90 min. weich kochen. Ab und zu prüfen, ob noch genug Flüssigkeit im Topf ist und wenn nötig ein wenig Suppe nachgießen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Gemüse einmachen",
+        "ingredients": [
+            "__Gurkerl, Pfefferoni, Paprika…",
+            "__Schalotten",
+            "__Dill",
+            "Einlegeessig_und_1 TL Einlegekraut (gibt’s beides im Lagerhaus)",
+            "__Zucker"
+        ],
+        "instructions": "Gewaschene Früchte mit Schalotten und Dillkräutl in Gläser mit Original-deckel schlichten. Einlegekräutl und ½ TL Zucker je Glas dazugeben. Einlegeessig über die Früchte gießen, bis alle bedeckt sind, zuschrauben.\nIn einen großen Topf ein Tuch legen, darauf die Gläser stellen und mit Wasser anfüllen, bis die Gläser 1/3 von Wasser bedeckt sind. Aufkochen und 2 min. kochen lassen, anschließend von der Platte ziehen und zugedeckt auskühlen lassen.\nDie Gläser sollten mindestens 14 Tage stehen, bevor sie geöffnet werden.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Gurkensoße",
+        "ingredients": [
+            "30_g_Butter",
+            "2__Gurken",
+            "30_g_Mehl",
+            "__Suppe",
+            "Sauerrahm_oder_Milch",
+            "__Salz, Pfeffer, Dill"
+        ],
+        "instructions": "Die geschälten, blättrig geschnittenen Gurken werden in heißer Butter weich gedünstet, dann staubt man und gießt mit Suppe auf. Die aufgekochte Soße wird püriert, mit Sauerrahm oder Milch verbessert und gewürzt.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Schweinsgeschnetzeltes",
+        "ingredients": [
+            "600_g_Schweinsfilet",
+            "2__Zwiebeln",
+            "4_Zehen_Knoblauch",
+            "2_EL_Öl",
+            "50_g_Butter",
+            "1_EL_Mehl",
+            "¼_l_Schlagobers",
+            "¼_l_Milch",
+            "1_Würfel_Bratensaft",
+            "__Salz, Pfeffer, Thymian"
+        ],
+        "instructions": "Fleisch mit Salz, Pfeffer und Thymian würzen. In Öl (am besten in zwei Arbeitsgängen) rasch anbraten, auf einem Teller warm stellen. Öl abgießen.\nIm Bratrückstand die Zwiebel in Butter anschwitzen,  Mehl einrühren, Knoblauch, Schlag, Milch und Bratensaftwürfel dazu, ca. 2 min. köcheln lassen, mit dem Stabmixer pürieren. Fleisch mit dem ausgetretenen Saft dazugeben, eventuell nochmals erhitzen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Putengeschnetzeltes mit Pfefferrahmsoße",
+        "ingredients": [
+            "600_g_Putenbrust",
+            "2_EL_bunte Pfefferkörner",
+            "1__Zwiebel",
+            "3_EL_Öl",
+            "1/8_l_Rotwein oder Wasser",
+            "40_g_Mehl",
+            "1_Würfel_Bratensaft",
+            "¼_l_Schlagobers",
+            "1_TL_Petersilie",
+            "__Butter",
+            "__Salz"
+        ],
+        "instructions": "In einer großen Pfanne Öl erhitzen. Fleisch salzen, im heißen Öl rundum kurz braten, aus der Pfanne heben und beiseitestellen.\nIm Bratrückstand gehackte Zwiebel in 1 TL Butter anschwitzen, Pfefferkörner oder geriebenen Pfeffer dazugeben, Mehl, Bratensaftwürfel und Schlagobers. Wenn die Soße zu dick ist, Milch dazugeben. 2 min. köcheln lassen.\nFleisch mit dem ausgetretenen Saft zugeben und kurz ziehen lassen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Hirselaibchen",
+        "ingredients": [
+            "150_g_Hirse",
+            "60_g_Vollrohrzucker oder brauner Zucker",
+            "450_ml_Wasser",
+            "2__Eier",
+            "50_g_Mehl",
+            "__Muskatnuss"
+        ],
+        "instructions": "Hirse in Sieb mit heißem Wasser überbrausen, dann in einem Topf mit 450 ml Wasser und Zucker aufkochen. Platte ausschalten, ca. 20 min. quellen lassen.\nMehl, Eier und Muskatnuss einrühren, Laibchen formen. In heißem Fett beidseitig braten.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Kohlrabisoße",
+        "ingredients": [
+            "2__Kohlrabi",
+            "__Petersilie, Porree, Schalottenkraut, Knoblauchkraut",
+            "__Suppe",
+            "__Salz"
+        ],
+        "instructions": "Kohlrabi abschälen und klein schneiden, mit Kräutern und Salz aufkochen, dann halb weich dünsten. Mit Mehl stauben und mit Suppe aufgießen.\nAm Anfang kann man einen Erdäpfel hineinschneiden.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Kompott",
+        "ingredients": [
+            "__Äpfel, Rhabarber, Birnen…",
+            "__Zucker",
+            "Saft_von_einer Zitrone",
+            "1__Zimtrinde",
+            "4-5__Gewürznelken"
+        ],
+        "instructions": "1 Liter Wasser mit ein paar Löffeln Zucker, Zitronensaft und Gewürzen aufkochen. 4-5 Äpfel hineingeben, noch einmal aufkochen und ca. 3 min. kochen lassen, bis die Äpfel in die Höhe steigen.\nRhabarber: vorher schälen, nicht lange kochen lassen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Kürbissoße",
+        "ingredients": [
+            "1_kleiner_Kürbis",
+            "1__Zwiebel",
+            "2__Tomaten",
+            "1__Paprika",
+            "__Suppe",
+            "__Essig, Paprikapulver, Muskatnuss, Salz",
+            "2_EL_Mehl",
+            "1_Becher_Sauerrahm"
+        ],
+        "instructions": "Kürbis schälen, schaben und salzen. Zwiebel anschwitzen, Tomaten und kleingeschnittenen Paprika dazu, Essig und Kürbis zum Gemüse, etwas nachsalzen, Suppenwürfel und Paprikapulver dazu. Weich dünsten, Mehl mit Sauerrahm verrühren und darunterrühren, zuletzt Muskatnuss.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Krautsuppe",
+        "ingredients": [
+            "½_kg_Weißkraut",
+            "1__Zwiebel",
+            "2_EL_Butter",
+            "5_Zehen_Knoblauch",
+            "2_EL_Paprikapulver",
+            "1_Liter_klare Suppe",
+            "1_Packerl_Sauerrahm",
+            "__Salz, Pfeffer, Kümmel, Majoran, Essig, Petersilie"
+        ],
+        "instructions": "Vom Krautkopf die äußeren Blätter entfernen. Kraut vierteln, Strunk ausschneiden, Kraut in sehr feine Streifen schneiden.\nZwiebel fein schneiden und in Butter anbraten. Kraut und gehackten Knoblauch zugeben und unter Rühren anrösten. Paprikapulver einrühren, Suppe zugießen und aufkochen. Würzen. Suppe auf kleiner Flamme ca. ½ Stunde köcheln, bis das Kraut weich ist. Pürieren, Sauerrahm einrühren und mit Petersilie bestreuen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Knoblauchsuppe",
+        "ingredients": [
+            "1_kleine_Zwiebel",
+            "5-10__Knoblauchzehen",
+            "40_g._Butter",
+            "__Suppenwürfel",
+            "__Schwarzbrot"
+        ],
+        "instructions": "Zwiebel und Knoblauch fein schneiden, in Butter hellgelb anrösten, mit Suppe aufgießen. 5 min. kochen, mit geröstetem Schwarzbrot anrichten.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Krautsuppe",
+        "ingredients": [
+            "2__Zwiebeln",
+            "Etwas_Speck_oder Wurst",
+            "3__Tomaten",
+            "1__Paprika",
+            "½__Krautkopf",
+            "__Suppe",
+            "__Knoblauch, Majoran, Paprikapulver, Kümmel",
+            "1_Packerl_Sauerrahm"
+        ],
+        "instructions": "Zwiebel und Speck/Wurst anrösten. Gewürfelte Tomaten, Paprika und Kraut dazugeben, mit Suppe aufgießen. Würzen und weich kochen lassen, mit Sauerrahm abschmecken.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Letscho",
+        "ingredients": [
+            "2-3__Zwiebeln",
+            "4-5__Tomaten",
+            "2__Paprika",
+            "2_EL_Ketchup",
+            "1_Schuß_Essig",
+            "1_EL_Paprikapulver",
+            "__Salz"
+        ],
+        "instructions": "Zwiebel klein schneiden, glasig dünsten lassen. Paprika und Tomaten schneiden und dazugeben. Würzen und ca. fünf Minuten kochen lassen.\nMan kann das Letscho mit Pfeffer oder scharfem Paprikapulver scharf würzen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Lasagne",
+        "ingredients": [
+            "__TODO"
+        ],
+        "instructions": "Abwechselnd Nudelblätter oder andere gekochte Nudeln, Sugo und Bechamelsoße in Römertopf schlichten, am Schluss geriebenen Käse oder Schmelzkäsescheiben und Oregano drübergeben.\nBei 200°C auf der untersten Schiene des Backrohres 20 min. backen, bis es brutzelt.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Lasagneblätter",
+        "ingredients": [
+            "1_EL_Öl",
+            "2-3__Zwiebeln",
+            "500_g_Faschiertes",
+            "½_Tube_Tomatenmark",
+            "1_Schuss_Rum",
+            "__Oregano, Thymian, Salz"
+        ],
+        "instructions": "Zwiebel in Öl glasig dünsten. Faschiertes anrösten, Gewürze dazugeben, etwas Wasser dazu. Zehn Minuten kochen lassen.",
+        "parent_recipe": "Lasagne"
+    },
+    {
+        "title": "Bechamel",
+        "ingredients": [
+            "3_EL_Butter",
+            "3_EL_Mehl",
+            "½_Liter_Milch",
+            "__Salz, Pfeffer, Muskatnuss"
+        ],
+        "instructions": "Butter zerlassen, Mehl dazugeben, 2 Minuten lang rühren. Milch dazugeben, aufkochen und sechs Minuten unter ständigem Rühren kochen lassen. Abschmecken.",
+        "parent_recipe": "Lasagne"
+    },
+    {
+        "title": "Lauchcremesuppe",
+        "ingredients": [
+            "2_EL_Butter",
+            "2_Stangen_Lauch",
+            "2__Erdäpfel",
+            "1_EL_Mehl",
+            "Klare__Suppe",
+            "__Salz",
+            "1_Packerl_Schlagobers",
+            "__Schnittlauch"
+        ],
+        "instructions": "Lauch in feine Ringe schneiden, in heißer Butter anbraten, mit Mehl stauben und mit Suppe aufgießen. Kleingeschnittene Erdäpfel dazu, ca. ½ Stunde kochen lassen. Salzen, mit Sahne verfeinern und mit Schnittlauch servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Marillenknödel",
+        "ingredients": [
+            "2_Packerl_Topfen (mager)",
+            "2__Eier",
+            "100_g_Mehl",
+            "100_g_Grieß",
+            "__Salz",
+            "__Anbereitung",
+            "100_g_Butter",
+            "1_Tasse_Brösel",
+            "2_EL_Rum"
+        ],
+        "instructions": "Alle Zutaten gut vermischen und eine Dreiviertelstunde stehen lassen.\nFinger in Mehl tauchen und Knödel formen.\nIn kochendes Salzwasser geben und zurückschalten, das Wasser soll nicht zuviel sprudeln. Knödel sind fertig, wenn sie obenauf schwimmen.\nIn einer Pfanne Butter zergehen lassen, Brösel hellbraun rösten, dabei ständig rühren. Wenn sie dunkel genug sind Rum dazugeben.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Marmelade einkochen ohne Entsafter",
+        "ingredients": [
+            "__Erdbeeren, Marillen, Zwetschken …",
+            "__Gelierzucker (am besten 1:2, oder 1:3)"
+        ],
+        "instructions": "Früchte mit ein paar Löffeln Wasser in einen Topf geben und aufkochen, danach ständig rühren, bis alle Früchte weich verkocht sind. Erdbeeren kann man auch vor dem Kochen mit der Hand zerdrücken.\nDann den Gelierzucker dazugeben und nochmals aufkochen lassen.\nCa. zehn Minuten kochen lassen, ständig umrühren und Schaum abschöpfen.\nIn gewaschene, mit Rum ausgespülte Gläser füllen, die auf feuchtem Tuch stehen. Gut zuschrauben.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Marmelade einkochen mit dem Entsafter",
+        "ingredients": [
+            "__Früchte, geputzt oder gewaschen",
+            "__Gelierzucker"
+        ],
+        "instructions": "Entsafter so aufstellen, dass es aus dem Schlauch abrinnen kann. In die unterste Kammer Wasser bis zur Rille hineinfüllen (dort wo der obere Topf aufsitzt) und während des Kochvorgangs gelegentlich Wasser nachfüllen, wenn schon viel verdampft ist. In den Sieb kommen die Früchte. Nach dem Schlauch soll der Saft noch durch ein feines Sieb rinnen, bevor er in einen zweiten Topf rinnt, der tiefer als der Entsafter steht. Das Ganze dauert über eine Stunde. Wenn die Früchte schon etwas verkocht sind, darf man mit einem Holzlöffel vorsichtig umrühren.\nDanach wird Topf 2 auf den Herd gestellt und der Fruchtsaft aufgekocht. Erst jetzt kommen für jeden Liter Saft 1 kg Gelierzucker dazu. Immer gut umrühren. Mindestens fünf, am besten zehn Minuten wallend kochen lassen und nebenbei den Schaum abschöpfen.\nJetzt die Marmelade durch einen Trichter in Gläser füllen, die vorher gewaschen und mit Rum ausgespült worden sind. Die Gläser auf ein feuchtes Tuch stellen und immer nur kleinweise die Marmelade einfüllen. Den Schraubdeckel gut verschließen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Schnitzel mit Paprikastreifen",
+        "ingredients": [
+            "__Schnitzelfleisch",
+            "__Salz, Pfeffer",
+            "½_TL_Paprikapulver",
+            "2__Zwiebel",
+            "3-4__Paprika",
+            "__Salz, Basilikum"
+        ],
+        "instructions": "Schnitzel mit Pfeffer und Paprikapulver einreiben, in heißer Butter von jeder Seite 3-4 Minuten braten. Fleisch herausnehmen, salzen und warm halten.\nZwiebelwürfel im verbliebenen Fett glasig braten, Paprikastreifen dazu, Salz und viel Basilikum drüberstreuen. Bei mittlerer Hitze unter ständigem Rühren braten, bis der Paprika gar, aber noch knackig ist.\nDazu passen Petersilerdäpfel.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Spaghetti mit Gorgonzolasoße",
+        "ingredients": [
+            "1__Zwiebel",
+            "1_Packerl_Gorgonzola dolcelatte",
+            "1__Suppenwürfel",
+            "1_Becher_Schlag",
+            "__Etwas Milch,",
+            "__Salz, Pfeffer",
+            "__Nudeln"
+        ],
+        "instructions": "Zwiebel in Butter anschwitzen, Käse dazu und schmelzen lassen, restliche Zutaten dazugeben und ca. fünf Minuten köcheln lassen. Wenn man will, kann man alles mit dem Pürierstab mixen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Topfennockerl mit Marillenröster",
+        "ingredients": [
+            "2_Packerl_Topfen (mager)",
+            "2__Eier",
+            "4_EL_Sauerrahm",
+            "2_EL_Staubzucker",
+            "100_g_Mehl",
+            "1_Prise_Salz"
+        ],
+        "instructions": "Topfen mit Eiern, Sauerrahm, Zucker, Mehl und Salz gut verrühren. Masse zugedeckt ca. eine Stunde im Kühlschrank rasten lassen.\nReichlich Salzwasser aufkochen lassen. Mit einem Löffel Nockerl aus der Topfenmasse ausstechen und ins kochende Wasser legen. Ca. zehn Minuten gar ziehen lassen, das Wasser soll nicht sprudeln. Nockerln mit einem Siebschöpfer aus dem Wasser heben und in die Brösel geben. Mit Staubzucker bestreut servieren, dazu Marillenröster.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Butterbrösel",
+        "ingredients": [
+            "150_g_Butter",
+            "300_g_Semmelbrösel",
+            "40_g_Kristallzucker",
+            "1_TL_Vanillezucker oder Orangenzucker"
+        ],
+        "instructions": "Butter erhitzen, Brösel und Zucker zugeben und unter Rühren goldgelb rösten.",
+        "parent_recipe": "Topfennockerl mit Marillenröster"
+    },
+    {
+        "title": "Marillenröster",
+        "ingredients": [
+            "½_kg_Marillen",
+            "1/16_Liter_Wasser",
+            "100_g_Kristallzucker",
+            "Saft_von_einer Zitrone",
+            "1_Prise_Zimt"
+        ],
+        "instructions": "Alles aufkochen und die Früchte weich kochen, dabei öfters umrühren.",
+        "parent_recipe": "Topfennockerl mit Marillenröster"
+    },
+    {
+        "title": "Paprikasuppe",
+        "ingredients": [
+            "2_große_Zwiebel",
+            "1_kg_Paprika",
+            "3_Zehen_Knoblauch",
+            "1_Packerl_Schlag",
+            "1_l_Suppe",
+            "__Salz, Pfeffer, Essig, Basilikum, Honig"
+        ],
+        "instructions": "Im Öl zuerst Zwiebel, dann Paprikawürfel anschwitzen. Knoblauch dazu, mit Suppe aufgießen. Mit Honig, Basilikum und Salz würzen. 20 Minuten köcheln lassen, Pfeffer und Balsamicoessig dazu. Schlag unterrühren, pürieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Pizza",
+        "ingredients": [
+            "__Schinken, Zwiebel, Paprika, Tiefkühlgemüse (bissfest gekocht), Pizzakäse"
+        ],
+        "instructions": "Bei 200° im nicht vorgeheizten Backrohr 20 Minuten backen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Pizzateig",
+        "ingredients": [
+            "½_kg_Weizenvollkornmehl",
+            "2_Packungen_Trockengerm",
+            "2_TL_Salz",
+            "2_EL_Öl",
+            "__1/4 und 1/16 l lauwarmes Wasser,"
+        ],
+        "instructions": "Das Weizenmehl und das Salz in eine Schüssel der Küchenmaschine geben, Germ und Öl dazu und kneten lassen. Das lauwarme Wasser portionsweise zufügen. Solange kneten lassen, bis sich der Teig vom Schüsselrand löst und Blasen wirft (dauert einige Minuten). Den Teig zugedeckt an einem warmen Ort ca. 15 Minuten rasten lassen. Danach in zwei Hälften teilen und zwei Backbleche mit dem Teig bedecken.",
+        "parent_recipe": "Pizza"
+    },
+    {
+        "title": "Pizzasoße",
+        "ingredients": [
+            "__Tomaten oder Tomatensaft aus der Packung,",
+            "__Öl, Salz, Oregano."
+        ],
+        "instructions": "Alles pürieren und stehen lassen, damit die Kräuter ihren Geschmack entfalten können.",
+        "parent_recipe": "Pizza"
+    },
+    {
+        "title": "Pizzastangerl",
+        "ingredients": [
+            "__Pizzagewürz"
+        ],
+        "instructions": "Grundrezept Pizzateig\nTeig wie oben zubereiten und rasten lassen. Backrohr auf 250° vorheizen. Backblech mit Backpapier belegen. Teig in ca. 40g schwere Stücke schneiden, diese zu ca. 15 cm langen Stangen rollen. Auf das Backblech legen, mit Wasser bestreichen, mit Pizzagewürz bestreuen und mit Mehl bestauben. Im Rohr 8-10 Minuten knusprig braun backen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Rindfleisch gekocht",
+        "ingredients": [
+            "3__Zwiebel",
+            "__Rindsschnitzel",
+            "__Salz, Pfeffer, Kümmelpulver, Rum",
+            "1__Suppenwürfel",
+            "1_TL_Mehl"
+        ],
+        "instructions": "Zwiebel klein schneiden und dünsten, Rindsschnitzel dazu, salzen und pfeffern, wenig Kümmelpulver dazu. Zugedeckt anrösten lassen, bis das Blut herauskommt. Nach ca. 15 Minuten das Fleisch umdrehen. Einen Schuss Rum (oder ½ Glasl Rotwein) und etwas Wasser dazugeben und bei größerer Hitze weiterdünsten lassen. Fleisch dabei immer wieder hin- und herschieben, damit es sich nicht an der Pfanne anlegt. 1 Suppenwürfel dazugeben und wenn nötig kleinweise etwas Wasser.\nZehn Minuten vor Schluss mit Mehl stauben und Fleisch dann gleich umdrehen.\nSpiralnudeln passen am besten dazu.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Reisfleisch",
+        "ingredients": [
+            "30_g_Fett",
+            "2__Zwiebeln",
+            "300_g_Schweinefleisch",
+            "1_Tasse_Reis",
+            "2__Tomaten",
+            "1__Paprika",
+            "1_L_Tomatenmark",
+            "1_L_Essig",
+            "¾_l_Suppe",
+            "__Salz, Majoran, Kümmel"
+        ],
+        "instructions": "Feingehackte Zwiebeln und Fleisch in heißem Fett gut anrösten, Reis kurz mitrösten. Gemüse, Tomatenmark und Essig dazugeben, mit Suppe aufgießen. Aufkochen, würzen und zugedeckt 30 Minuten dünsten.\nDas Gemüse kann man auch weglassen und dafür Paprikapulver verwenden.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Spaghettisoße",
+        "ingredients": [
+            "1_EL_Öl",
+            "2__Zwiebel",
+            "50-600_g_Faschiertes",
+            "2_EL_Paprikapulver",
+            "2_EL_Essig",
+            "2_Zehen_Knoblauch",
+            "__Salz, Pfeffer, Majoran, Thymian, Oregano",
+            "½_Tube_Tomatenmark + Wasser oder 2 Packerl Tomatensaft"
+        ],
+        "instructions": "Gehackte Zwiebel glasig dünsten, Faschiertes dazugeben und anrösten, bis alles braun ist. Gewürze dazu und ca. 10 Minuten köcheln lassen, dabei öfters umrühren.\nAm besten schmeckt die Soße allerdings, wenn man sie eine Stunde lang kochen lässt.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Festtagssuppe",
+        "ingredients": [
+            "2-3__Suppenwürfel",
+            "__1,5 l Wasser",
+            "1_EL_Essig",
+            "__Suppenfleisch vom Rind, gewürfelt",
+            "__Möhren, Sellerie, Petersilwurzel…",
+            "__Suppennudeln",
+            "__Salz, Pfeffer, Muskat, Schnittlauch"
+        ],
+        "instructions": "Suppe aufkochen lassen, Gemüse und Fleisch dazugeben, Essig dazu und bei mittlerer Hitze ca. 30 Minuten köcheln lassen. Suppennudeln dazugeben und weitere fünf Minuten kochen lassen. Würzen, mit Schnittlauch bestreut servieren. Man kann die Nudeln auch extra kochen. Besonders würzig wird die Suppe mit ein paar Blättern Liebstöckl. Der Essig macht das Suppenfleisch zart.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erbsensuppe mit Würsterl",
+        "ingredients": [
+            "1__Zwiebel",
+            "300_g_Tiefkühlerbsen",
+            "1_EL_Butter",
+            "1_EL_Mehl",
+            "½_l_Suppe",
+            "¼_l_Milch",
+            "2_Paar_Frankfurter",
+            "__Salz, Pfeffer, Muskatnuss"
+        ],
+        "instructions": "Zwiebel und Erbsen in Butter anschwitzen, Mehl einrühren und kurz mitrösten. Mit Suppe und Milch aufgießen und ca. 12 Minuten köcheln lassen. Mit dem Stabmixer pürieren, mit Salz, Pfeffer und Muskatnuss würzen.\nGekochte Frankfurter in Scheiben schneiden und dazugeben. Es passen aber auch geröstete Brotwürfel dazu.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Szegediner Gulasch",
+        "ingredients": [
+            "¼_kg_Zwiebeln",
+            "¾_kg_Schweinefleisch",
+            "¾_kg_Sauerkraut",
+            "__Salz, Pfeffer, Paprikapulver, Tomatenmark, Kümmel",
+            "3_Zehen_Knoblauch",
+            "1_Becher_Sauerrahm",
+            "1__Suppenwürfel",
+            "1_EL_Mehl"
+        ],
+        "instructions": "Zwiebeln fein hacken und in Butter oder Schmalz glasig dünsten. Das Fleisch darin anbraten. Mit Salz, Pfeffer, Tomatenmark, Kümmel und fein gehacktem Knoblauch würzen. Paprikapulver drüberstreuen, mit Suppe aufgießen und eine knappe Stunde bei wenig Hitze dünsten lassen.\nDas klein geschnittene Sauerkraut dazugeben und eine weitere halbe Stunde köcheln lassen.\nSauerrahm mit Mehl verrühren und kurz vor Ende der Kochzeit zum Gulasch geben.\nSemmelknödel oder Erdäpfel passen dazu.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Minestrone",
+        "ingredients": [
+            "1__Zwiebel",
+            "1_Bund_Suppengrün oder 1 Sack Tiefkühlgemüse",
+            "2_EL_Tomatenmark",
+            "__Suppe",
+            "100_g_Suppennudeln",
+            "__Petersilie"
+        ],
+        "instructions": "Zwiebeln und Gemüse in Öl unter Rühren kräftig anrösten, bis alles leicht gebräunt ist. Tomatenmark dazugeben und kurz mitrösten. Dann mit 1,5 l Suppe aufgießen und eine Viertelstunde kochen lassen. Die Suppennudeln (am besten Hörnchen) dazugeben und weitere fünf Minuten kochen lassen. Bei Bedarf etwas salzen. Vor dem Servieren mit gehackter Petersilie bestreuen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Erdäpfel-Gemüsesuppe",
+        "ingredients": [
+            "1__Zwiebel",
+            "__Erdäpfel, in Würfel geschnitten",
+            "1_Bund_Suppengrün oder 1 Sack Tiefkühlgemüse",
+            "__Suppe, Muskatnuss",
+            "1_Becher_Sauerrahm"
+        ],
+        "instructions": "Zwiebel anschwitzen, mit Suppe aufgießen, Erdäpfel und Gemüsestücke dazu. Kochen lassen, bis alles weich ist. Mit Sauerrahm und Muskat abschmecken.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Schweinsbraten",
+        "ingredients": [
+            "__Schweinsschulter ohne Knochen, mit Schwarte",
+            "4__Zwiebel",
+            "4__Erdäpfel",
+            "__Knoblauch",
+            "__Salz, Pfeffer, Majoran, Kümmel",
+            "__Öl, Suppe"
+        ],
+        "instructions": "Backrohr auf 200° vorheizen. Zwiebel in Stücke schneiden, Erdäpfel vierteln.\nFleisch mit Salz, Pfeffer, Majoran, Kümmel und zerdrücktem Knoblauch rundum einreiben.\nIn einem hohen Kochtopf das Fleisch in Öl kurz rundum anbraten, danach den Braten in eine große Auflaufform geben, Erdäpfel und Zwiebel dazugeben, mit Suppe aufgießen und im Backrohr bei 200°C mindestens eine Stunde braten. Während des Bratens immer wieder mit der Suppe übergießen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Tomatensuppe",
+        "ingredients": [
+            "1__Zwiebel",
+            "3_EL_Mehl",
+            "frische_Tomaten_oder zwei Packerl Tomatensaft",
+            "2__Suppenwürfel",
+            "__Salz, Pfeffer",
+            "1_EL_Zucker",
+            "1_Tasse_Reis"
+        ],
+        "instructions": "Zwiebel glasig dünsten, Mehl dazu und rühren, bis es sich färbt (Einbrenn). Tomaten und Wasser dazu, Suppenwürfel, Salz, Pfeffer, Zucker. Fünf Minuten kochen lassen, pürieren.\nReis extra kochen (ohne Salz).",
+        "parent_recipe": null
+    },
+    {
+        "title": "Tomatensoße",
+        "ingredients": [
+            "2__Zwiebel",
+            "__Knoblauch",
+            "frische_Tomaten_oder zwei Packerl Tomatensaft",
+            "__Salz, Pfeffer, Thymian, Basilikum",
+            "1_EL_Zucker"
+        ],
+        "instructions": "Zwiebel glasig dünsten, Knoblauch und würfelig geschnittene Tomaten dazugeben, würzen und fünf Minuten dünsten lassen.\nEventuell pürieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Pfefferrahmsoße",
+        "ingredients": [
+            "3__Zwiebel",
+            "__Knoblauch",
+            "2_Würfel_Bratensaft",
+            "1__Schlagobers",
+            "¼_l_Milch",
+            "__Salz, Pfeffer, Petersilie",
+            "__Butter"
+        ],
+        "instructions": "Zwiebel in Butter dünsten, Knoblauch dazugeben, mit Schlagobers und Milch aufgießen, Bratensaftwürfel, Salz und Pfeffer dazugeben, fünf bis zehn Minuten dünsten.\nZuletzt fein pürieren und Petersilie dazugeben.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Käsespätzle",
+        "ingredients": [
+            "1_Packung_Spätzle",
+            "1_Packung_Spätzlekäse oder geriebenen Hartkäse",
+            "__Salz, Pfeffer, Schnittlauch",
+            "3__Zwiebel",
+            "__Mehl",
+            "__Öl"
+        ],
+        "instructions": "Spätzle in Salzwasser kochen, abseihen, in Auflaufform geben, Käse dazumischen und im Rohr überbacken, bis der Käse geschmolzen ist.\nMit Pfeffer und Schnittlauch abschmecken.\nZwiebel in Ringe schneiden, mit Küchenrolle so gut es geht trockentupfen.\nIn einem Teller Mehl wenden und in heißem Öl frittieren. Abtropfen lassen und zu den Käsespätzle servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Zucchinicremesuppe",
+        "ingredients": [
+            "3__Zucchini",
+            "1__Erdäpfel",
+            "2__Suppenwürfel",
+            "2__Knoblauchzehen",
+            "1_Becher_Sauerrahm",
+            "3_EL_Mehl",
+            "__Salz, Kümmelpulver, Essig, Petersilie, Pfeffer"
+        ],
+        "instructions": "Wasser erwärmen, dabei einen Erdäpfel ganz fein hineinschneiden. Zucchiniwürfel ins kochende Wasser geben, Salz, Kümmel, Suppenwürfel,\nfeinwürfeligen Knoblauch dazu. Kochen lassen, bis alles weich ist.\nMit Pürierstab mixen.\nSauerrahm mit 1/8 l Wasser und Mehl versprudeln, bis keine Knöpfe mehr zu sehen sind. In Suppe geben, 1 Schuss Essig dazu. Noch fünf Minuten kochen. Petersilie und Pfeffer unterrühren, mit Brotwürfeln servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Zwiebelsuppe",
+        "ingredients": [
+            "5-6__Zwiebel",
+            "2__Suppenwürfel",
+            "2_EL_Zucker",
+            "__Salz, Pfeffer, Schnittlauch",
+            "__Butter"
+        ],
+        "instructions": "Gehackte Zwiebel in Butter dünsten, mit Suppe aufgießen, salzen, pfeffern, Zucker unterrühren. 20 Minuten kochen lassen, mit Pürierstab mixen. Mit Schnittlauch und Brotwürfeln servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Gefüllte Zucchini",
+        "ingredients": [
+            "3__Zucchini",
+            "250_g_Faschiertes",
+            "1__Zwiebel",
+            "3__Tomaten",
+            "__2 Zehen Knoblauch, fein geschnitten",
+            "1__Schafkäse",
+            "2_EL_Tomatenmark",
+            "__Salz, Pfeffer, Oregano, Basilikum",
+            "__Öl"
+        ],
+        "instructions": "Zucchini der Länge nach halbieren, mit einem kleinen Löffel aushöhlen und an den Unterseiten ein wenig abflachen. Öl erhitzen, Zwiebelwürfel anschwitzen, Faschiertes, Paprika- und Zucchinistücke dazugeben und gut anrösten. Mit etwas Wasser verdünnen. Tomatenmark, Salz, Pfeffer, Oregano und Knoblauch unterrühren und wenige Minuten kochen.\nBackrohr auf 200°C vorheizen. Die Zucchinihälften auf ein Backblech legen und mit der Fülle belegen. Obenauf kommen Schafkäse-Würfel und Tomaten-Würfel sowie etwas Basilikum. Im vorgeheizten Rohr, untere Schiene, zwölf Minuten garen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Grießnockerlsuppe",
+        "ingredients": [
+            "40_g_Butter",
+            "1__Ei",
+            "110_g_Grieß",
+            "__Salz, Muskat",
+            "1_l_Suppe"
+        ],
+        "instructions": "Die Butter wird in einem Suppenteller mit einer Gabel flaumig gerührt.\nEi, Grieß, Salz und Muskatnuß unterrühren, bis eine weiche Masse entsteht. 10 Minuten ziehen lassen. Dann formt man aus der Masse mit einem Löffel Nockerl, die man in der Suppe 15 Minuten kochen lässt.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Grießschmarren",
+        "ingredients": [
+            "60_g_Butter",
+            "360_g_Grieß",
+            "60_g_Zucker",
+            "¾_l_Milch",
+            "60_g_Rosinen",
+            "__Salz"
+        ],
+        "instructions": "Milch mit Salz und Butter aufkochen, Grieß unter ständigem Rühren einlaufen lassen, aufkochen, Zucker einrühren und 20 Minuten quellen lassen.\nRosinen in einem extra Gefäß in Wasser-Rum-Mischung wenige Minuten kochen lassen, bis sie weich sind. Nach Geschmack dazureichen.\nMan kann weniger Zucker dazugeben und dafür ein Packerl Orangenzucker unterrühren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Grenadiermarsch",
+        "ingredients": [
+            "5__Zwiebel",
+            "1__Braunschweiger",
+            "8__Erdäpfel",
+            "250_g_Spiralnudeln",
+            "__Salz, Pfeffer",
+            "__Öl"
+        ],
+        "instructions": "Erdäpfel kochen und würfelig schneiden, Nudeln kochen.\nZwiebelwürfel kräftig anrösten, Erdäpfel mitrösten, würfelig geschnittene Wurst und Nudeln unterrühren und gut durcherhitzen. Mit Salz und Pfeffer abschmecken.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Eintropfsuppe",
+        "ingredients": [
+            "60_g_Mehl",
+            "1__Ei",
+            "1/16_l_Wasser",
+            "__Salz",
+            "1_l_Suppe"
+        ],
+        "instructions": "Alle Zutaten verrühren, in die kochende Suppe eintropfen lassen und einmal aufkochen. Man kann dem Teig Muskatnuß oder Petersilie zufügen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Semmelschöberlsuppe",
+        "ingredients": [
+            "4__Semmeln",
+            "3__Eier",
+            "½_l_Milch",
+            "__Salz",
+            "__Öl",
+            "1_l_Suppe"
+        ],
+        "instructions": "Milch, Eier und Salz verquirlen, in Scheiben geschnittene Semmeln in der Masse anweichen lassen, in heißem Öl beidseitig anbraten und auf Küchenpapier abtropfen lassen. Zur Suppe servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Gefüllte Paprika",
+        "ingredients": [
+            "5__Paprika",
+            "250_g_Faschiertes",
+            "2__Zwiebel",
+            "1_Tasse_Reis",
+            "1_Packerl_passierte Tomaten",
+            "1_EL_Zucker",
+            "__Salz, Pfeffer, Petersilie, Basilikum",
+            "__Öl"
+        ],
+        "instructions": "Paprika waschen, obere Kappe mit dem Stiel abschneiden, Zwischenwände und Kerne entfernen. Zwiebel in Würfel schneiden und dünsten, Reis dünsten. Mit Faschiertem, Salz, Pfeffer, Petersilie vermischen. Die Paprika damit füllen und in eine Auflaufform setzen.\nPassierte Tomaten mit Salz, Basilikum und Zucker vermischen und dazugießen. Im Rohr 50 Minuten dünsten.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Würsterlgulasch",
+        "ingredients": [
+            "2__Zwiebel",
+            "6_große_Erdäpfel",
+            "2_Paar_Frankfurter",
+            "3_EL_Butter",
+            "1_EL_Paprikapulver",
+            "1_Schuss_Essig",
+            "3_Zehen_Knoblauch",
+            "1_Pkg._passierte Tomaten",
+            "__Salz, Majoran, Kümmel",
+            "½_l_Suppe"
+        ],
+        "instructions": "Zwiebel fein hacken und in Butter anrösten. Paprikapulver einrühren und mit Essig ablöschen. Erdäpfel würfelig schneiden und dazugeben, mit Majoran, Kümmel, Knoblauch und Salz würzen. Mit Tomaten und Suppe aufgießen und kochen, bis die Erdäpfel weich sind. Die Würstel in Scheiben schneiden und kurz vor Ende der Kochzeit unterrühren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Apple Crumble",
+        "ingredients": [
+            "500_g_Äpfel",
+            "100_g_Butter",
+            "100_g_Zucker",
+            "175_g_Mehl",
+            "Saft_von_einer Zitrone",
+            "__Zimt"
+        ],
+        "instructions": "Äpfel schälen und in Spalten schneiden, mit dem Zitronensaft beträufeln und in eine Auflaufform (vorher einfetten!) geben.\nAus Butter, Zucker, Mehl und Zimt Streuselteig machen und auf den Äpfeln verteilen.\nBei 200°C ungefähr 30 Minuten backen und mit Schlagsahne servieren.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Vanillekipferl",
+        "ingredients": [
+            "280_g_Mehl",
+            "210_g_Butter",
+            "70_g_Zucker",
+            "100_g_Nüsse (keine Haselnüsse)"
+        ],
+        "instructions": "Zutaten vermischen, zwei Stunden kaltstellen und dann bei 175°C\nca. 10 Minuten backen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Zum Wälzen:",
+        "ingredients": [
+            "100_g_Staubzucker",
+            "1_Pkg._Vanillezucker"
+        ],
+        "instructions": "Am Blech einige Minuten auskühlen lassen, danach in der Zuckermischung drehen.",
+        "parent_recipe": "Vanillekipferl"
+    },
+    {
+        "title": "Tiramisu",
+        "ingredients": [
+            "¼_kg_Qimiq",
+            "½_kg_Mascarpone",
+            "1/8_l_Milch",
+            "1_EL_gesiebtes Löskaffeepulver",
+            "80_g_Zucker",
+            "1_Pkg._Vanillezucker",
+            "5_EL_Amaretto",
+            "¼_l_Schlagobers",
+            "40_Stück_Biskotten",
+            "¼_l_Kaffee",
+            "5_EL_Rum",
+            "__Kakaopulver"
+        ],
+        "instructions": "Qimiq glattrühren, Mascarpone, Milch, Löskaffeepulver, Zucker, Vanillezucker und Amaretto dazumischen. Schlagobers schlagen und unterheben.\nBiskotten in Rum-Kaffee tunken und mit der Creme schichtweise in eine Form geben. Abschließend das Tiramisu mit Kakaopulver bestreuen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Rumschnitten",
+        "ingredients": [
+            "250_g_Mehl",
+            "250_g_Zucker",
+            "250_g_Butter",
+            "250_g_Schokolade",
+            "6__Eier",
+            "1_Pkg._Vanillezucker"
+        ],
+        "instructions": "Butter schaumig rühren, abwechselnd Dotter und Zucker beimengen, dann geriebene Schokolade, Eischnee und Mehl unterheben.\nDen Teig auf ein befettetes Blech ca. 2 cm dick aufstreichen und im Rohr bei 200°C ca. 25 Minuten backen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Glasur",
+        "ingredients": [
+            "1/8_l_Rum",
+            "300_g_Staubzucker"
+        ],
+        "instructions": "Mit Rumglasur überziehen.",
+        "parent_recipe": "Rumschnitten"
+    },
+    {
+        "title": "Weiße Kokoskugeln",
+        "ingredients": [
+            "400_g_weiße Kuvertüre",
+            "100_g_Butter",
+            "1_Packerl_Schlagobers",
+            "1_Messerspitze_Salz",
+            "200_g_Kokosflocken",
+            "4_EL_Kokosflocken"
+        ],
+        "instructions": "Die Kuvertüre mit einem scharfen Messer klein hacken und die Butter in Würfel schneiden. Dann die Sahne mit dem Salz kurz aufkochen lassen und von der Kochstelle ziehen. Mit einem Kochlöffel die Schokolade und die Butter einrühren. Danach die Kokosflocken untermengen und den Teig zwei Stunden kühl stellen.\nKleine Kugeln formen (etwa 2-3 cm dick) und in Kokosflocken wälzen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Lebkuchen",
+        "ingredients": [
+            "200_g_Zucker",
+            "250_g_Honig",
+            "100_g_Butter",
+            "4__Eier",
+            "500_g_Roggenmehl",
+            "1_TL_Natron",
+            "1_Pkg._Lebkuchengewürz"
+        ],
+        "instructions": "Zucker, Honig, Butter und Eier leicht erwärmen und schaumig rühren. Restliche Zutaten zum Abtrieb geben.\n12 Stunden rasten lassen. Ca. ½ cm dick ausrollen und bei 175°C zehn Minuten backen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Germteigkrampus",
+        "ingredients": [
+            "2_Eier_(zimmerwarm)",
+            "100_g_Butter (zimmerwarm)",
+            "2_Pkg._Trockengerm",
+            "¼_l_lauwarme Milch",
+            "600_g_Mehl (griffig)",
+            "100_g_Feinkristallzucker",
+            "1_Pkg._Vanillezucker",
+            "Rosinen_für_Augen und Knöpfe",
+            "1_Ei_zum Bestreichen",
+            "Rote_Dreiecke_aus Papier für die Krampuszunge"
+        ],
+        "instructions": "Eier schaumig schlagen und warme Butter dazugeben. Trockengerm in Zucker und Milch auflösen, Mehl dazugeben und mit der Eier-Buttermasse lange verrühren.\nGermteig zugedeckt an einem warmen Ort gehen lassen. Dann die Masse in sechs Stücke teilen und Krampusse formen. Rosinen platzieren und nochmals gehen lassen. Mit Ei bestreichen, Krampuszungen andrücken und im vorgeheizten Rohr bei 200°C ca. zwanzig Minuten backen.\nGermteig – so gelingt er\nDie Hefepilze arbeiten nur, wenn es warm ist. Am besten ist es, wenn Eier, Butter und Milch Zimmertemperatur haben, um ein optimales Aufgehen zu erleichtern (um die 30°C).\nWichtig ist außerdem ein intensives Kneten und Schlagen des Teiges, um die Germ mit ausreichend Sauerstoff zu versorgen.\nFalls das gewählte Germteigrezept Öl, Butter oder Margarine beinhaltet, ist es sinnvoll, Fett und Germ getrennt zum Teig zu geben. Denn wenn die Germ direkt mit dem Fett in Berührung kommt, kann es vorkommen, dass sie von den Fetttröpfchen umschlossen wird und die Hefepilze nicht mehr atmen können. Das verhindert die Kohlendioxid-Bildung und der Teig kann nicht mehr aufgehen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Nußkuchen",
+        "ingredients": [
+            "140_g_Butter",
+            "3__Eier",
+            "200_g_Zucker",
+            "1_Pkg._Vanillezucker",
+            "1_TL_Lebkuchengewürz",
+            "3_EL_Rum",
+            "140_g_geriebene Nüsse",
+            "70_g_Semmelbrösel",
+            "70_g_Mehl",
+            "2_TL_Backpulver"
+        ],
+        "instructions": "Butter, Eier, Zucker, Vanillezucker und Lebkuchengewürz schaumig rühren. Die restlichen Zutaten unterrühren.\nEine Backform mit Butter bestreichen und Semmelbrösel ausstreuen. Den Teig in die Form geben und bei 180°C auf mittlerer Schiene ca. 40 Minuten backen.\nDen abgekühlten Kuchen mit Staubzucker bestreuen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Schneeflocken-Torte",
+        "ingredients": [
+            "60_g_Kokosflocken",
+            "100_g_Butter",
+            "50_g_Staubzucker",
+            "1_Pkg._Vanillezucker",
+            "1_Prise_Salz",
+            "4__Dotter",
+            "80_g_Mehl (griffig)",
+            "4__Eiklar",
+            "50_g_Kristallzucker"
+        ],
+        "instructions": "Kokosflocken ohne Fett unter ständigem Rühren hellbraun rösten. Von der Hitze nehmen und auskühlen lassen. Backform mit flüssiger Butter ausstreichen und mit Bröseln ausstreuen.\nButter mit Zucker, Vanillezucker und Salz schaumig rühren. Dotter nach und nach unterrühren. Mehl und geröstete Kokosflocken unterziehen.\nEiklar zu steifem Schnee schlagen, Zucker beifügen, Eischnee nochmals fest aufschlagen und vorsichtig unterheben.\nMasse in die vorbereitete Form füllen und im vorgeheizten Rohr auf mittlerer Schiene bei 170°C etwa 35 Minuten backen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Füllung",
+        "ingredients": [
+            "60_g_Marmelade",
+            "2_Pkg._Schlagobers",
+            "2_Pkg._Sahnesteif"
+        ],
+        "instructions": "TODO",
+        "parent_recipe": "Schneeflocken-Torte"
+    },
+    {
+        "title": "Nuß-Gugelhupf",
+        "ingredients": [
+            "150_g_dunkle Schokolade",
+            "300_g_Mehl (glatt)",
+            "100_g_geriebene Biskotten",
+            "180_g_geriebene Walnüsse",
+            "50_g_geriebene Mandeln",
+            "8__Eier",
+            "40_ml_Rum",
+            "160_g_weiche Butter",
+            "1_Pkg._Vanillezucker",
+            "1_Prise_Zimt",
+            "1_Prise_Salz",
+            "½__Zitronenschale",
+            "320_g_Kristallzucker",
+            "__Butter, Staubzucker"
+        ],
+        "instructions": "Schokolade hacken. Mehl mit Biskottenbröseln und Walnüssen vermischen. Backrohr auf 180°C vorheizen. Eine Gugelhupf-Form mit Butter ausstreichen und mit den Mandeln ausstreuen.\nEier in Dotter (extra Schüssel) und Klar trennen. Dotter mit Rum verrühren. Butter mit Vanillezucker, Zimt, Salz und Zitronenschale gut cremig rühren. Dotter nach und nach einrühren.\nEiklar mit der Hälfte vom Kristallzucker cremig schlagen, restlichen Zucker einrieseln lassen und weiter schlagen, bis sich der Zucker aufgelöst hat\n(der Schnee soll aber nicht zu fest werden). Die Hälfte vom Schnee in die Butter-Dotter-Mischung rühren, übrigen Schnee und Mehlmischung nur sachte unterheben. Zuletzt die Schokoladestücke untermischen.\nMasse in die Form füllen und ca. eine Stunde im Rohr, untere Schiene, backen.\nGugelhupf aus dem Rohr nehmen, ca. fünf Minuten rasten lassen, aus der Form stürzen und auskühlen lassen. Vor dem Servieren mit Staubzucker bestreuen.",
+        "parent_recipe": null
+    },
+    {
+        "title": "Marmor-Gugelhupf",
+        "ingredients": [
+            "6__Eier",
+            "300_g_Butter",
+            "60_g_Staubzucker",
+            "Schale_von_½ Zitrone",
+            "1_Pkg._Vanillezucker",
+            "200_g_Kristallzucker",
+            "300_g_Mehl (glatt)",
+            "1_EL_Kakaopulver",
+            "2_EL_Öl",
+            "__Salz",
+            "Butter_und_Mehl für die Form",
+            "Staubzucker_zum_Bestreuen"
+        ],
+        "instructions": "Backrohr auf 170°C vorheizen. Gugelhupf-Form mit Butter ausstreichen und mit Mehl ausstreuen.\nEier in Dotter (extra Schüssel) und Klar trennen. Weiche Butter mit Staubzucker, Zitronenschale, Vanillezucker und wenig Salz cremig rühren. Dotter nach und nach untermischen.\nEiklar mit der Hälfte vom Kristallzucker zu cremigem Schnee schlagen. Restlichen Zucker einrieseln lassen und schlagen, bis sich der Zucker aufgelöst hat (der Schnee darf dabei aber nicht zu fest werden).\nEin Drittel vom Schnee in den Butterabtrieb rühren. Das Mehl und des restlichen Schnee behutsam unterheben.\nKakao mit Öl verrühren. Ein Drittel des Teiges in ein anderes Gefäß geben und mit der Kakaomischung verrühren.\nHelle und dunkle Masse abwechselnd in die vorbereitete Form füllen. Im Rohr auf der untersten Schiene ca. eine Stunde backen.\nVor dem Servieren mit Staubzucker bestreuen.",
+        "parent_recipe": null
+    }
+]
