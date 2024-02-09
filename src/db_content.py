@@ -1,5 +1,5 @@
 import json
-from models import db, Rezept, Zutat, Bewertung, Tag, Bild, RezeptSchritt
+from models import db, Rezept, Zutat, Bewertung, Tag, Bild, Schritt
 
 
 def fill_database(app):

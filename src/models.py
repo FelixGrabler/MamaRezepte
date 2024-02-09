@@ -9,7 +9,7 @@ class Rezept(db.Model):
     anweisung = db.Column(db.String, nullable=True)
     hauptrezept_id = db.Column(db.Integer, db.ForeignKey("rezept.id"), nullable=True)
     zutaten = db.relationship("Zutat", backref="rezept", lazy=True)
-    schritte = db.relationship("RezeptSchritt", backref="rezept", lazy=True)
+    schritte = db.relationship("Schritt", backref="rezept", lazy=True)
     bewertungen = db.relationship("Bewertung", backref="rezept", lazy=True)
     bilder = db.relationship("Bild", backref="rezept", lazy=True)
     tags = db.relationship(
@@ -20,16 +20,20 @@ class Rezept(db.Model):
     )
 
 
-class RezeptSchritt(db.Model):
+class Schritt(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     rezept_id = db.Column(db.Integer, db.ForeignKey("rezept.id"), nullable=True)
     schritt_nummer = db.Column(db.Integer, nullable=True)
     anweisung = db.Column(db.String, nullable=True)
+    zutaten = db.relationship("Zutat", backref="schritt", lazy=True)
 
 
 class Zutat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    rezept_id = db.Column(db.Integer, db.ForeignKey("rezept.id"), nullable=True)
+    rezept_id = db.Column(db.Integer, db.ForeignKey("rezept.id"), nullable=False)
+    schritt_id = db.Column(
+        db.Integer, db.ForeignKey("schritt.id"), nullable=False
+    )
     menge = db.Column(db.String, nullable=True)
     einheit = db.Column(db.String, nullable=True)
     bezeichnung = db.Column(db.String, nullable=True)
