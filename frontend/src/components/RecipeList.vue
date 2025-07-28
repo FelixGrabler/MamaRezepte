@@ -24,9 +24,15 @@
         v-for="(recipe, index) in filteredRecipes" 
         :key="index"
         class="recipe-card"
+        :class="{ 'no-image': !recipe.image_path }"
         @click="goToRecipe(index)"
       >
-        <h3 class="recipe-title">{{ recipe.title }}</h3>
+        <div v-if="recipe.image_path" class="recipe-image">
+          <img :src="`/data/${recipe.image_path}`" :alt="recipe.title" />
+        </div>
+        <div class="recipe-content">
+          <h3 class="recipe-title">{{ recipe.title }}</h3>
+        </div>
       </div>
     </div>
 

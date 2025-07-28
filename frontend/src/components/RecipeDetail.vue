@@ -15,6 +15,10 @@
     <div v-else-if="recipe" class="recipe-detail">
       <h1>{{ recipe.title }}</h1>
 
+      <div v-if="recipe.image_path" class="recipe-detail-image">
+        <img :src="`/data/${recipe.image_path}`" :alt="recipe.title" />
+      </div>
+
       <div class="ingredients-section">
         <h3>Zutaten</h3>
         <ul class="ingredients-list">

@@ -20,7 +20,8 @@
             "__Salz"
         ],
         "instructions": "Zutaten glatt verrühren, etwas Teig in eine befettete Pfanne geben, gleichmäßig dünn verteilen und beidseitig backen. Zwischen jeder Omelette die Pfanne neu einfetten.",
-        "parent_recipe": null
+        "parent_recipe": null,
+        "image_path": "images/omletten.jpg"
     },
     {
         "title": "Schmarren",
