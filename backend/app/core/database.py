@@ -23,7 +23,7 @@ def init_database():
                 parent_id INTEGER,
                 FOREIGN KEY (parent_id) REFERENCES recipes (id)
             )
-        """
+            """
         )
 
         # Create ingredients table
@@ -37,7 +37,7 @@ def init_database():
                 ingredient TEXT NOT NULL,
                 FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
             )
-        """
+            """
         )
 
         # Create tags table
@@ -47,7 +47,7 @@ def init_database():
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL UNIQUE
             )
-        """
+            """
         )
 
         # Create recipe_tags junction table
@@ -60,7 +60,7 @@ def init_database():
                 FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE,
                 FOREIGN KEY (tag_id) REFERENCES tags (id) ON DELETE CASCADE
             )
-        """
+            """
         )
 
         conn.commit()
@@ -88,7 +88,7 @@ def get_all_recipes() -> List[Dict[str, Any]]:
             SELECT id, title, instructions, image_path, parent_id
             FROM recipes
             ORDER BY title
-        """
+            """
         )
 
         recipes = []
@@ -102,7 +102,7 @@ def get_all_recipes() -> List[Dict[str, Any]]:
                 FROM ingredients
                 WHERE recipe_id = ?
                 ORDER BY id
-            """,
+                """,
                 (recipe["id"],),
             )
 
@@ -121,7 +121,7 @@ def get_all_recipes() -> List[Dict[str, Any]]:
                 JOIN recipe_tags rt ON t.id = rt.tag_id
                 WHERE rt.recipe_id = ?
                 ORDER BY t.name
-            """,
+                """,
                 (recipe["id"],),
             )
 
@@ -144,7 +144,7 @@ def get_recipe_by_id(recipe_id: int) -> Optional[Dict[str, Any]]:
             SELECT id, title, instructions, image_path, parent_id
             FROM recipes
             WHERE id = ?
-        """,
+            """,
             (recipe_id,),
         )
 
@@ -161,7 +161,7 @@ def get_recipe_by_id(recipe_id: int) -> Optional[Dict[str, Any]]:
             FROM ingredients
             WHERE recipe_id = ?
             ORDER BY id
-        """,
+            """,
             (recipe_id,),
         )
 
@@ -180,7 +180,7 @@ def get_recipe_by_id(recipe_id: int) -> Optional[Dict[str, Any]]:
             JOIN recipe_tags rt ON t.id = rt.tag_id
             WHERE rt.recipe_id = ?
             ORDER BY t.name
-        """,
+            """,
             (recipe_id,),
         )
 
@@ -206,7 +206,7 @@ def create_recipe(
             """
             INSERT INTO recipes (title, instructions, image_path, parent_id)
             VALUES (?, ?, ?, ?)
-        """,
+            """,
             (title, instructions, image_path, parent_id),
         )
 
@@ -218,7 +218,7 @@ def create_recipe(
                 """
                 INSERT INTO ingredients (recipe_id, amount, unit, ingredient)
                 VALUES (?, ?, ?, ?)
-            """,
+                """,
                 (
                     recipe_id,
                     ingredient.get("amount"),

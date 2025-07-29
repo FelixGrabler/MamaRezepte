@@ -10,4 +10,4 @@ API_TITLE = "Mama Rezepte API"
 API_VERSION = "1.0.0"
 
 # CORS configuration
-CORS_ORIGINS = ["*"]  # In production, replace with specific origins
+CORS_ORIGINS = ["*"]
