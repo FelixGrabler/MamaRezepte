@@ -1,9 +1,7 @@
 import os
 
 # Database configuration
-DATABASE_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "..", "..", "data", "recipes.db"
-)
+DATABASE_PATH = "data/recipes.db"
 
 # API configuration
 API_TITLE = "Mama Rezepte API"

@@ -2,7 +2,7 @@
 
 # Start development environment
 dev:
-	docker-compose --profile dev up backend-dev frontend-dev
+	docker-compose --profile dev up backend-dev frontend-dev -d
 
 # Start production environment
 up:

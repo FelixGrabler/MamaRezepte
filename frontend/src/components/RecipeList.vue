@@ -60,11 +60,14 @@ export default {
   },
   computed: {
     filteredRecipes() {
+      // Only show recipes that are not sub-recipes (parent_id is null/undefined)
+      let parentRecipes = this.recipes.filter(recipe => !recipe.parent_id)
+      
       if (!this.searchTerm) {
-        return this.recipes
+        return parentRecipes
       }
       const term = this.searchTerm.toLowerCase()
-      return this.recipes.filter(recipe => 
+      return parentRecipes.filter(recipe => 
         recipe.title.toLowerCase().includes(term) ||
         recipe.ingredients.some(ingredient => 
           ingredient.ingredient.toLowerCase().includes(term)
