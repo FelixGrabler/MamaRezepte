@@ -1,4 +1,4 @@
-.PHONY: dev up build down clean logs install convert-db
+.PHONY: dev up build down clean logs install
 
 # Start development environment
 dev:
@@ -27,12 +27,3 @@ logs:
 # Install dependencies in development
 install:
 	cd frontend && npm install
-
-# Convert JSON to SQLite database
-convert-db:
-	cd backend && python scripts/convert_json_to_db.py
-
-# Setup database (create directories and convert)
-setup-db:
-	mkdir -p data
-	cd backend && python scripts/convert_json_to_db.py

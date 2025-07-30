@@ -20,9 +20,7 @@ backend/
 │   └── models/                 # Pydantic models
 │       ├── __init__.py
 │       └── schemas.py          # Request/Response models
-├── scripts/
-│   └── convert_json_to_db.py   # JSON to SQLite conversion script
-├── data/                       # Database storage (created at runtime)
+├── data/                       # Database storage (persistent volume)
 ├── Dockerfile                  # Production Docker image
 ├── Dockerfile.dev              # Development Docker image
 └── requirements.txt            # Python dependencies
@@ -88,9 +86,6 @@ backend/
 # Install dependencies
 pip install -r requirements.txt
 
-# Convert JSON data to SQLite (one time setup)
-python scripts/convert_json_to_db.py
-
 # Run the development server
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
@@ -104,14 +99,6 @@ make dev
 # Production
 make up
 ```
-
-### Converting JSON Data
-
-The `scripts/convert_json_to_db.py` script converts the existing `recipes.json` file to SQLite database format. It handles:
-
-- Parsing ingredient strings with amounts, units, and names
-- Converting Unicode fractions to decimal values
-- Creating proper database relationships
 
 ## Configuration
 

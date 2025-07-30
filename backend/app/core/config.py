@@ -2,7 +2,7 @@ import os
 
 # Database configuration
 DATABASE_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "..", "data", "recipes.db"
+    os.path.dirname(__file__), "..", "..", "..", "data", "recipes.db"
 )
 
 # API configuration

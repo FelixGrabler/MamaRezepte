@@ -27,7 +27,7 @@ async def create_recipe(recipe: RecipeCreate):
     recipe_id = database.create_recipe(
         title=recipe.title,
         instructions=recipe.instructions,
-        ingredients=[ing.dict() for ing in recipe.ingredients],
+        ingredients=[ing.model_dump() for ing in recipe.ingredients],
         image_path=recipe.image_path,
         parent_id=recipe.parent_id,
     )

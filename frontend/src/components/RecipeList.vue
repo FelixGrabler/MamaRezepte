@@ -21,17 +21,20 @@
 
     <div v-else class="recipe-grid">
       <div 
-        v-for="(recipe, index) in filteredRecipes" 
-        :key="index"
+        v-for="recipe in filteredRecipes" 
+        :key="recipe.id"
         class="recipe-card"
         :class="{ 'no-image': !recipe.image_path }"
-        @click="goToRecipe(index)"
+        @click="goToRecipe(recipe.id)"
       >
         <div v-if="recipe.image_path" class="recipe-image">
           <img :src="`/data/${recipe.image_path}`" :alt="recipe.title" />
         </div>
         <div class="recipe-content">
           <h3 class="recipe-title">{{ recipe.title }}</h3>
+          <div v-if="recipe.tags && recipe.tags.length" class="recipe-tags">
+            <span v-for="(tag, index) in recipe.tags" :key="`${recipe.id}-tag-${index}`" class="tag">{{ tag }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -43,6 +46,8 @@
 </template>
 
 <script>
+import apiService from '../services/api.js'
+
 export default {
   name: 'RecipeList',
   data() {
@@ -62,27 +67,30 @@ export default {
       return this.recipes.filter(recipe => 
         recipe.title.toLowerCase().includes(term) ||
         recipe.ingredients.some(ingredient => 
-          ingredient.toLowerCase().includes(term)
-        )
+          ingredient.ingredient.toLowerCase().includes(term)
+        ) ||
+        (recipe.tags && recipe.tags.some(tag => 
+          tag.toLowerCase().includes(term)
+        ))
       )
     }
   },
   async mounted() {
-    try {
-      const response = await fetch('/data/recipes.json')
-      if (!response.ok) {
-        throw new Error('Fehler beim Laden der Rezepte')
-      }
-      this.recipes = await response.json()
-    } catch (err) {
-      this.error = 'Rezepte konnten nicht geladen werden: ' + err.message
-    } finally {
-      this.loading = false
-    }
+    await this.loadRecipes()
   },
   methods: {
-    goToRecipe(index) {
-      this.$router.push(`/recipe/${index}`)
+    async loadRecipes() {
+      try {
+        this.loading = true
+        this.recipes = await apiService.getRecipes()
+      } catch (err) {
+        this.error = 'Rezepte konnten nicht geladen werden: ' + err.message
+      } finally {
+        this.loading = false
+      }
+    },
+    goToRecipe(id) {
+      this.$router.push(`/recipe/${id}`)
     }
   }
 }

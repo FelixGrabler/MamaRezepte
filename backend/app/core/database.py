@@ -211,6 +211,8 @@ def create_recipe(
         )
 
         recipe_id = cursor.lastrowid
+        if recipe_id is None:
+            raise ValueError("Failed to create recipe")
 
         # Insert ingredients
         for ingredient in ingredients:
@@ -308,8 +310,24 @@ def remove_tag_from_recipe(recipe_id: int, tag_id: int) -> bool:
             """
             DELETE FROM recipe_tags
             WHERE recipe_id = ? AND tag_id = ?
-        """,
+            """,
             (recipe_id, tag_id),
+        )
+        conn.commit()
+        return cursor.rowcount > 0
+
+
+def update_recipe_parent(recipe_id: int, parent_id: Optional[int]) -> bool:
+    """Update the parent_id of a recipe."""
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            """
+            UPDATE recipes
+            SET parent_id = ?
+            WHERE id = ?
+            """,
+            (parent_id, recipe_id),
         )
         conn.commit()
         return cursor.rowcount > 0
