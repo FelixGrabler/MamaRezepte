@@ -269,3 +269,10 @@ body {
   border-bottom: 2px solid #667eea;
   padding-bottom: 0.5rem;
 }
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
+}
