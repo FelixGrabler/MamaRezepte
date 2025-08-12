@@ -26,7 +26,7 @@
       <!-- All ingredients grouped at the top -->
       <div class="all-ingredients-section">
         <h2>Zutaten</h2>
-        
+
         <!-- Main recipe ingredients -->
         <div class="ingredient-group">
           <h3>{{ childRecipes.length ? recipe.title + ' (Hauptrezept)' : recipe.title }}</h3>
@@ -51,7 +51,7 @@
       <!-- All instructions grouped at the bottom -->
       <div class="all-instructions-section">
         <h2>Zubereitung</h2>
-        
+
         <!-- Child recipe instructions first -->
         <div v-for="childRecipe in childRecipes" :key="`instructions-${childRecipe.id}`" class="instruction-group">
           <h3>{{ childRecipe.title }}</h3>
@@ -66,7 +66,7 @@
       </div>
 
       <div v-if="parentRecipe" class="parent-recipe">
-        <p><strong>Teil von:</strong> 
+        <p><strong>Teil von:</strong>
           <button @click="goToRecipe(parentRecipe.id)" class="parent-link">
             {{ parentRecipe.title }}
           </button>
@@ -111,39 +111,39 @@ export default {
       try {
         this.loading = true
         this.error = null
-        
+
         // Load the main recipe
         this.recipe = await apiService.getRecipe(this.id)
-        
+
         // Load all recipes to find relationships
         this.allRecipes = await apiService.getRecipes()
-        
+
         // Find child recipes (recipes that have this recipe as parent)
-        this.childRecipes = this.allRecipes.filter(r => 
+        this.childRecipes = this.allRecipes.filter(r =>
           r.parent_id && r.parent_id.toString() === this.id.toString()
         )
-        
+
         // Find parent recipe if this recipe has a parent
         this.parentRecipe = null
         if (this.recipe.parent_id) {
-          this.parentRecipe = this.allRecipes.find(r => 
+          this.parentRecipe = this.allRecipes.find(r =>
             r.id.toString() === this.recipe.parent_id.toString()
           )
         }
-        
+
       } catch (err) {
         this.error = 'Rezept konnte nicht geladen werden: ' + err.message
       } finally {
         this.loading = false
       }
     },
-    
+
     formatIngredients(ingredients) {
       if (!ingredients) return []
-      
+
       return ingredients.map(ingredient => {
         let formatted = ''
-        
+
         if (ingredient.amount) {
           formatted += ingredient.amount
           if (ingredient.unit) {
@@ -151,17 +151,17 @@ export default {
           }
           formatted += ' '
         }
-        
+
         formatted += ingredient.ingredient
-        
+
         return formatted
       })
     },
-    
+
     goToRecipe(recipeId) {
       this.$router.push(`/recipe/${recipeId}`)
     },
-    
+
     goBack() {
       this.$router.push('/')
     }
@@ -311,26 +311,26 @@ export default {
   .recipe-detail {
     padding: 0 0.5rem;
   }
-  
+
   .all-ingredients-section,
   .all-instructions-section {
     margin: 1.5rem 0;
   }
-  
+
   .instructions {
     margin: 1rem 0.5rem;
     padding: 0.5rem;
   }
-  
+
   .ingredients-list {
     padding-left: 1rem;
   }
-  
+
   .ingredient-group h3,
   .instruction-group h3 {
     font-size: 1rem;
   }
-  
+
   .all-ingredients-section h2,
   .all-instructions-section h2 {
     font-size: 1.2rem;

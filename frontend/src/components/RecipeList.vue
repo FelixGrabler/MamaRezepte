@@ -1,12 +1,12 @@
 <template>
   <div>
     <h2>Rezepte Übersicht</h2>
-    
+
     <div class="search-container">
-      <input 
-        v-model="searchTerm" 
-        type="text" 
-        placeholder="Rezept suchen..." 
+      <input
+        v-model="searchTerm"
+        type="text"
+        placeholder="Rezept suchen..."
         class="search-input"
       />
     </div>
@@ -20,8 +20,8 @@
     </div>
 
     <div v-else class="recipe-grid">
-      <div 
-        v-for="recipe in filteredRecipes" 
+      <div
+        v-for="recipe in filteredRecipes"
         :key="recipe.id"
         class="recipe-card"
         :class="{ 'no-image': !recipe.image_path }"
@@ -62,17 +62,17 @@ export default {
     filteredRecipes() {
       // Only show recipes that are not sub-recipes (parent_id is null/undefined)
       let parentRecipes = this.recipes.filter(recipe => !recipe.parent_id)
-      
+
       if (!this.searchTerm) {
         return parentRecipes
       }
       const term = this.searchTerm.toLowerCase()
-      return parentRecipes.filter(recipe => 
+      return parentRecipes.filter(recipe =>
         recipe.title.toLowerCase().includes(term) ||
-        recipe.ingredients.some(ingredient => 
+        recipe.ingredients.some(ingredient =>
           ingredient.ingredient.toLowerCase().includes(term)
         ) ||
-        (recipe.tags && recipe.tags.some(tag => 
+        (recipe.tags && recipe.tags.some(tag =>
           tag.toLowerCase().includes(term)
         ))
       )
