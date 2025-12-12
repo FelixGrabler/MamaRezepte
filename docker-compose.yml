@@ -4,7 +4,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
+      - "8050:8000"
     environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
@@ -14,7 +14,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile.dev
     ports:
-      - "8000:8000"
+      - "8051:8000"
     volumes:
       - ./backend:/app
     environment:
@@ -30,7 +30,7 @@ services:
       - "3000:80"
     environment:
       - NODE_ENV=production
-      - VITE_API_URL=http://localhost:8000
+      - VITE_API_URL=http://localhost:8050
     restart: unless-stopped
     depends_on:
       - backend
@@ -46,7 +46,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-      - VITE_API_URL=http://localhost:8000
+      - VITE_API_URL=http://localhost:8051
     command: npm run dev
     profiles:
       - dev
