@@ -8,6 +8,8 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
+    networks:
+      - grabler-network
 
   backend-dev:
     build:
@@ -34,6 +36,9 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
+    networks:
+      - grabler-network
+
 
   frontend-dev:
     build:
@@ -52,3 +57,8 @@ services:
       - dev
     depends_on:
       - backend-dev
+
+
+networks:
+  grabler-network:
+    external: true
