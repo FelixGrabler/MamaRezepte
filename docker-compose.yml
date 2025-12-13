@@ -30,11 +30,12 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api
     ports:
       - "8050:80"
     environment:
       - NODE_ENV=production
-      - VITE_API_URL=http://localhost:8050
     restart: unless-stopped
     depends_on:
       - backend
