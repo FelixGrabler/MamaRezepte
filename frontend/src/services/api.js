@@ -1,5 +1,5 @@
 // API service for communicating with the backend
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8050";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8051";
 
 class ApiService {
   async request(endpoint, options = {}) {
