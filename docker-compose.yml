@@ -25,7 +25,6 @@ services:
       - dev
 
   frontend:
-    container_name: mama-rezepte
     build:
       context: ./frontend
       dockerfile: Dockerfile
