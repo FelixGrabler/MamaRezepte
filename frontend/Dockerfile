@@ -1,4 +1,4 @@
-# Production Dockerfile
+# Frontend Dockerfile
 FROM node:18-alpine AS builder
 
 WORKDIR /app
@@ -19,7 +19,7 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Production stage
+# Runtime stage
 FROM nginx:alpine
 
 # Copy built application

@@ -74,34 +74,26 @@ backend/
 - Backend service with persistent data volume
 - Environment variable passing for API URLs
 - Proper service dependencies (frontend depends on backend)
-- Development and production profiles
+- Single runtime configuration for deployment
 
 ### Dockerfile Improvements
 
 - Automatic database initialization
 - Proper Python environment setup
-- Development vs production configurations
+- Dedicated backend and frontend images for deployment
 
-## Available Commands
-
-````bash
-# Development
-make dev                # Start development environment
 ## Available Commands
 
 ```bash
-# Development
-make dev               # Start development environment
-
-# Production
-make up                # Start production environment
+# Start the application
+make up                # Start the application
 make build             # Build all Docker images
 
 # Maintenance
 make down              # Stop all containers
 make clean             # Clean up containers and images
 make logs              # Show logs
-````
+```
 
 ## Example Recursive Recipe Structure
 

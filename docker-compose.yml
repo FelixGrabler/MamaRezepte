@@ -13,19 +13,6 @@ services:
         aliases:
           - mamarezepte-backend
 
-  backend-dev:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile.dev
-    ports:
-      - "8051:8000"
-    volumes:
-      - ./backend:/app
-    environment:
-      - PYTHONUNBUFFERED=1
-    profiles:
-      - dev
-
   frontend:
     build:
       context: ./frontend
@@ -43,25 +30,6 @@ services:
       grabler-network:
         aliases:
           - mamarezepte-frontend
-
-
-  frontend-dev:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile.dev
-    ports:
-      - "5173:5173"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
-      - VITE_API_URL=http://localhost:8051
-    command: npm run dev
-    profiles:
-      - dev
-    depends_on:
-      - backend-dev
 
 
 networks:

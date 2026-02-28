@@ -1,10 +1,6 @@
-.PHONY: dev up build down clean logs install
+.PHONY: up build down clean logs install
 
-# Start development environment
-dev:
-	docker-compose --profile dev up backend-dev frontend-dev -d
-
-# Start production environment
+# Start the application
 up:
 	docker-compose up backend frontend
 
@@ -24,6 +20,6 @@ clean:
 logs:
 	docker-compose logs -f
 
-# Install dependencies in development
+# Install frontend dependencies
 install:
 	cd frontend && npm install

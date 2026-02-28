@@ -21,8 +21,7 @@ backend/
 │       ├── __init__.py
 │       └── schemas.py          # Request/Response models
 ├── data/                       # Database storage (persistent volume)
-├── Dockerfile                  # Production Docker image
-├── Dockerfile.dev              # Development Docker image
+├── Dockerfile                  # Docker image
 └── requirements.txt            # Python dependencies
 ```
 
@@ -78,25 +77,13 @@ backend/
 - `GET /` - API info
 - `GET /health` - Health check
 
-## Development
-
-### Running Locally
+## Running Locally
 
 ```bash
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the development server
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-### Using Docker
-
-```bash
-# Development
-make dev
-
-# Production
+# Run with Docker
 make up
 ```
 

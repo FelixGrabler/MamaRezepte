@@ -12,34 +12,19 @@ Eine Vue.js Webanwendung zur Anzeige von Mama's Rezepten.
 
 ## Schnellstart
 
-### Entwicklung
-
 ```bash
-# Entwicklungsumgebung starten
-make dev
-
-# Alternative:
-docker-compose --profile dev up frontend-dev
-```
-
-Die Anwendung ist dann unter http://localhost:5173 verfügbar.
-
-### Produktion
-
-```bash
-# Produktionsumgebung starten
+# Anwendung starten
 make up
 
 # Alternative:
 docker-compose up frontend
 ```
 
-Die Anwendung ist dann unter http://localhost:3000 verfügbar.
+Die Anwendung ist dann unter http://localhost:8050 verfügbar.
 
 ## Befehle
 
-- `make dev` - Startet die Entwicklungsumgebung
-- `make up` - Startet die Produktionsumgebung
+- `make up` - Startet die Anwendung
 - `make build` - Baut die Docker Images
 - `make down` - Stoppt alle Container
 - `make clean` - Entfernt alle Container und Images
@@ -62,4 +47,4 @@ Die Rezepte werden aus `data/recipes.json` geladen. Jedes Rezept hat folgende St
 - **Frontend**: Vue.js 3 + Vue Router
 - **Build-Tool**: Vite
 - **Container**: Docker + Docker Compose
-- **Webserver**: Nginx (Produktion)
+- **Webserver**: Nginx
