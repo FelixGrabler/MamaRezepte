@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import recipes, tags
 from app.core import database
@@ -18,9 +18,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
-app.include_router(recipes.router)
-app.include_router(tags.router)
+# Mount the API under /api for the frontend and keep the legacy routes for
+# direct backend access.
+api_router = APIRouter(prefix="/api")
+api_router.include_router(recipes.router)
+api_router.include_router(tags.router)
+
+app.include_router(api_router)
+app.include_router(recipes.router, include_in_schema=False)
+app.include_router(tags.router, include_in_schema=False)
 
 
 @app.get("/")
@@ -30,4 +36,9 @@ async def root():
 
 @app.get("/health")
 async def health_check():
+    return {"status": "healthy"}
+
+
+@app.get("/api/health", include_in_schema=False)
+async def api_health_check():
     return {"status": "healthy"}

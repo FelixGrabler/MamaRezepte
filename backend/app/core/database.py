@@ -7,6 +7,7 @@ from .config import DATABASE_PATH
 
 def init_database():
     """Initialize the database with the required tables."""
+    os.makedirs(os.path.dirname(DATABASE_PATH), exist_ok=True)
     with sqlite3.connect(DATABASE_PATH) as conn:
         cursor = conn.cursor()
 
