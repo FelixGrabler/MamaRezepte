@@ -5,7 +5,13 @@ async function login(page, username) {
   await page.getByLabel('Benutzername').fill(username)
   await page.getByLabel('Passwort', { exact: true }).fill('test-password')
   await page.getByRole('button', { name: 'Anmelden', exact: true }).click()
-  await expect(page.getByRole('button', { name: 'Abmelden' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Abmelden', includeHidden: true })).toHaveCount(1)
+}
+
+async function logout(page) {
+  const menu = page.getByRole('button', { name: 'Menü öffnen', exact: true })
+  if (await menu.isVisible()) await menu.click()
+  await page.getByRole('button', { name: 'Abmelden' }).click()
 }
 
 test('create, edit, and delete an owned private recipe with parts and photo', async ({ page }) => {
@@ -41,7 +47,7 @@ test('create, edit, and delete an owned private recipe with parts and photo', as
   const imageUrl = await page.getByRole('img', { name: 'Browser-Testkuchen' }).getAttribute('src')
   await expect.poll(() => page.getByRole('img', { name: 'Browser-Testkuchen' }).evaluate(img => img.naturalWidth)).toBeGreaterThan(0)
 
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await expect(page.getByRole('link', { name: 'Browser-Testkuchen', exact: true })).toHaveCount(0)
   await login(page, 'bob')
   await page.goto(path)
@@ -49,7 +55,7 @@ test('create, edit, and delete an owned private recipe with parts and photo', as
   const hiddenImage = await page.request.get(imageUrl)
   expect(hiddenImage.status()).toBe(404)
 
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await login(page, 'alice')
   await page.goto(path)
   await page.getByRole('link', { name: 'Bearbeiten', exact: true }).click()
@@ -57,7 +63,7 @@ test('create, edit, and delete an owned private recipe with parts and photo', as
   await page.getByLabel('Öffentlich sichtbar').check()
   await page.getByRole('button', { name: 'Rezept speichern' }).click()
   await expect(page.getByRole('heading', { name: 'Browser-Testkuchen geändert', exact: true }).first()).toBeVisible()
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await page.goto(path)
   await expect(page.getByRole('heading', { name: 'Browser-Testkuchen geändert', exact: true }).first()).toBeVisible()
   await expect(page.getByRole('link', { name: 'Bearbeiten', exact: true })).toHaveCount(0)
@@ -85,7 +91,7 @@ test('Felix edits original public recipes directly on mobile', async ({ page }) 
   await expect(page).toHaveURL('/recipe/48')
   await expect(page.getByRole('heading', { name: 'Pizzateig', exact: true }).first()).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Pizzasoße', exact: true }).first()).toBeVisible()
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await page.goto('/recipe/48')
   await expect(page.getByRole('link', { name: 'Familienpizza', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Bearbeiten', exact: true })).toHaveCount(0)
@@ -104,7 +110,7 @@ test('favourites persist per account and category/tag filters combine', async ({
   await expect(page.getByRole('heading', { name: 'Pizza', exact: true })).toBeVisible()
   await page.reload()
   await expect(page.getByRole('heading', { name: 'Pizza', exact: true })).toBeVisible()
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await login(page, 'bob')
   await page.getByRole('link', { name: '★ Favouriten', exact: true }).click()
   await expect(page.getByText('Noch keine Favouriten. Markiere ein Rezept mit einem Stern.')).toBeVisible()
@@ -114,7 +120,7 @@ test('favourites persist per account and category/tag filters combine', async ({
   await expect(page.getByRole('heading', { name: 'Tomatensuppe', exact: true })).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Pizza', exact: true })).toHaveCount(0)
   await page.getByRole('button', { name: 'Filter zurücksetzen', exact: true }).click()
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await login(page, 'alice')
   await page.getByRole('link', { name: '★ Favouriten', exact: true }).click()
   await page.getByRole('button', { name: 'Pizza: Aus Favouriten entfernen', exact: true }).click()
@@ -171,7 +177,7 @@ test('portion controls scale main and part amounts without changing units or sav
   await page.getByLabel('Portionen', { exact: true }).fill('4')
   await page.getByLabel('Portionen', { exact: true }).press('Tab')
   await expect(page.getByText('2 000 g Mehl', { exact: true })).toBeVisible()
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await logout(page)
   await page.goto(path)
   await expect(page.getByLabel('Portionen', { exact: true })).toHaveValue('2')
   await page.getByRole('button', { name: 'Eine Portion mehr', exact: true }).click()
@@ -190,8 +196,8 @@ test('registration creates a shared account and signs in immediately', async ({ 
   await page.getByLabel('Passwort wiederholen').fill('family-password')
   await page.getByRole('button', { name: 'Registrieren', exact: true }).click()
   await expect(page).toHaveURL('/favourites')
-  await expect(page.getByRole('button', { name: 'Abmelden' })).toBeVisible()
-  await page.getByRole('button', { name: 'Abmelden' }).click()
+  await expect(page.getByRole('button', { name: 'Abmelden', includeHidden: true })).toHaveCount(1)
+  await logout(page)
   await page.goto('/register')
   await page.getByLabel('Benutzername').fill('browser.family')
   await page.getByLabel('Passwort', { exact: true }).fill('family-password')
@@ -201,6 +207,7 @@ test('registration creates a shared account and signs in immediately', async ({ 
 })
 
 test('desktop filters stay left and sticky; stars and detail metadata are compact', async ({ page }) => {
+  await page.setViewportSize({ width: 1600, height: 900 })
   await login(page, 'felix')
   const ids = []
   try {
@@ -213,6 +220,9 @@ test('desktop filters stay left and sticky; stars and detail metadata are compac
     await expect(page.locator('.recipe-card').first()).toBeVisible()
     await expect(page.locator('.recipe-card .category-badge, .recipe-card .recipe-tags')).toHaveCount(0)
     const sidebar = page.locator('.recipe-filters')
+    expect((await sidebar.boundingBox()).x).toBeLessThanOrEqual(20)
+    expect((await page.locator('.recipe-grid').boundingBox()).width).toBeGreaterThan(1200)
+    await page.screenshot({ path: 'test-results/recipes-desktop.png' })
     expect((await sidebar.boundingBox()).x).toBeLessThan((await page.locator('.recipe-grid').boundingBox()).x)
     await page.evaluate(() => window.scrollTo(0, 350))
     expect((await sidebar.boundingBox()).y).toBeCloseTo(16, 0)
@@ -236,4 +246,42 @@ test('desktop filters stay left and sticky; stars and detail metadata are compac
   } finally {
     for (const id of ids) await page.request.delete(`/api/recipes/${id}`, { headers: { Origin: 'http://localhost:15173' } })
   }
+})
+
+
+test('mobile navigation uses one header row and closes on navigation, Escape and outside clicks', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/')
+  const nav = page.getByRole('navigation', { name: 'Hauptnavigation', includeHidden: true })
+  await expect(nav).toBeHidden()
+  await page.getByRole('button', { name: 'Menü öffnen' }).click()
+  await expect(nav).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Menü schließen' })).toHaveAttribute('aria-expanded', 'true')
+  await page.getByRole('link', { name: 'Anmelden', exact: true }).click()
+  await expect(page).toHaveURL('/login')
+  await expect(nav).toBeHidden()
+  await login(page, 'felix')
+  for (const width of [320, 390, 768]) {
+    await page.setViewportSize({ width, height: 844 })
+    expect((await page.locator('.header').boundingBox()).height).toBeLessThanOrEqual(80)
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+    await page.getByRole('button', { name: 'Menü öffnen' }).click()
+    await expect(page.getByRole('link', { name: '★ Favouriten', exact: true })).toBeVisible()
+    await page.keyboard.press('Escape')
+    await expect(nav).toBeHidden()
+    await expect(page.getByRole('button', { name: 'Menü öffnen' })).toBeFocused()
+  }
+  await page.getByRole('button', { name: 'Menü öffnen' }).click()
+  await page.locator('.page-heading h2').click()
+  await expect(nav).toBeHidden()
+  await page.getByRole('button', { name: 'Menü öffnen' }).click()
+  await page.getByRole('link', { name: '★ Favouriten', exact: true }).click()
+  await expect(page).toHaveURL('/favourites')
+  await expect(nav).toBeHidden()
+  await page.getByRole('button', { name: 'Menü öffnen' }).click()
+  await page.screenshot({ path: 'test-results/mobile-menu.png' })
+  await logout(page)
+  await expect(nav).toBeHidden()
+  await page.getByRole('button', { name: 'Menü öffnen' }).click()
+  await expect(page.getByRole('link', { name: 'Registrieren', exact: true })).toBeVisible()
 })
