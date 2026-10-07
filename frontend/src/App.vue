@@ -10,7 +10,7 @@
           <span>{{ session.user.username }}</span>
           <button class="nav-link" @click="logout" :disabled="busy">Abmelden</button>
         </template>
-        <router-link v-else class="nav-link" to="/login">Anmelden</router-link>
+        <template v-else><router-link class="nav-link" to="/login">Anmelden</router-link><router-link class="nav-link" to="/register">Registrieren</router-link></template>
       </nav>
     </header>
     <main class="main">

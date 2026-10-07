@@ -1,5 +1,4 @@
 import io
-import sqlite3
 
 from PIL import Image
 from sqlalchemy import select, func
@@ -7,27 +6,15 @@ from app.core import database as db, config
 from conftest import login
 
 
-def test_migration_preserves_records_parts_ingredients_and_tags(client):
-    legacy = sqlite3.connect(config.LEGACY_DATABASE)
+def test_startup_preserves_existing_recipes_and_parts(client):
+    before = client.get('/api/recipes/48').json()
     with db.session() as session:
-        assert session.scalar(select(func.count()).select_from(db.Recipe)) >= 88
-        for row in legacy.execute('SELECT id,title,instructions,parent_id,image_path FROM recipes'):
-            recipe = session.get(db.Recipe, row[0])
-            assert (recipe.title, recipe.instructions, recipe.parent_id, recipe.image_path) == row[1:]
-            assert recipe.is_public and recipe.owner_username == "felix"
-            assert recipe.owner_id in (None, 1003) and recipe.servings == 4
-            original = legacy.execute('SELECT amount,unit,ingredient FROM ingredients WHERE recipe_id=? ORDER BY id', (row[0],)).fetchall()
-            assert [(i.amount, i.unit, i.ingredient) for i in recipe.ingredients] == original
-            tags = legacy.execute('SELECT t.name FROM tags t JOIN recipe_tags rt ON t.id=rt.tag_id WHERE rt.recipe_id=? ORDER BY t.name', (row[0],)).fetchall()
-            expected_tags = {t[0] for t in tags}
-            if recipe.parent_id is None:
-                expected_tags.add('Mama-Rezept')
-            assert {t.name for t in recipe.tags} == expected_tags
         count = session.scalar(select(func.count()).select_from(db.Recipe))
     db.init_database()
     with db.session() as session:
         assert session.scalar(select(func.count()).select_from(db.Recipe)) == count
-    assert client.get('/api/recipes/48').json()['parts'][0]['title'] == 'Pizzateig'
+    assert client.get('/api/recipes/48').json() == before
+    assert before['parts'][0]['title'] == 'Pizzateig'
 
 
 def test_default_public_auth_and_ownership(client, payload):
@@ -128,7 +115,7 @@ def test_csrf_login_cookie_and_payload_validation(client, payload):
     assert client.get('/api/auth/me').json() is None
 
 
-def test_legacy_image_and_revoked_session(client):
+def test_original_image_and_revoked_session(client):
     response = client.get('/api/recipes/48/image')
     assert response.status_code == 200
     client.cookies.set(config.COOKIE_NAME, 'revoked', path='/api')

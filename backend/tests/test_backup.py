@@ -20,9 +20,13 @@ def test_postgres_backup_restore_and_retention(client, tmp_path, payload):
         pytest.skip('PostgreSQL client tools are required for recovery test')
     root = Path(__file__).resolve().parents[2]
     url = db.engine.url
+    originals = tmp_path / "original-images"
+    originals.mkdir()
+    original_photo = originals / "pizza.jpg"
+    original_photo.write_bytes((config.IMAGE_DIR / "pizza.jpg").read_bytes())
     images = config.UPLOAD_DIR
     login(client)
-    payload.update(is_public=False, category='Nachspeiße', servings=6, tags=['süß', 'Familienessen'])
+    payload.update(is_public=False, category='Nachspeise', servings=6, tags=['süß', 'Familienessen'])
     recipe = client.post('/api/recipes/', json=payload).json()
     rid = recipe['id']
     raw = io.BytesIO()
@@ -43,7 +47,7 @@ def test_postgres_backup_restore_and_retention(client, tmp_path, payload):
     unrelated.mkdir()
     env = dict(os.environ, PGHOST=url.host or 'localhost', PGPORT=str(url.port or 5432),
                PGUSER=url.username, PGDATABASE=url.database, PASSWORD_FILE=str(password),
-               UPLOAD_ROOT=str(images), BACKUP_ROOT=str(backups), BACKUP_KEEP='8')
+               UPLOAD_ROOT=str(images), IMAGE_ROOT=str(originals), BACKUP_ROOT=str(backups), BACKUP_KEEP='8')
     before = client.get('/api/recipes/48').json()
     subprocess.run(['sh', str(root / 'ops/backup.sh')], env=env, check=True)
     completed = sorted(p.name for p in backups.iterdir() if p.is_dir() and p.name.endswith('Z'))
@@ -55,9 +59,18 @@ def test_postgres_backup_restore_and_retention(client, tmp_path, payload):
         for table in reversed(db.Base.metadata.sorted_tables):
             conn.execute(text(f'DROP TABLE {table.name} CASCADE'))
     photo.unlink()
+    expected_original = original_photo.read_bytes()
+    original_photo.unlink()
     subprocess.run(['sh', str(root / 'ops/restore.sh'), stamp], env=env, check=True)
     assert client.get('/api/recipes/48').json() == before
     assert photo.read_bytes() == original_image
+    assert original_photo.read_bytes() == expected_original
+    # Older backups without original-image archives remain restorable.
+    snapshot = backups / stamp
+    (snapshot / "images.tar.gz").unlink()
+    checksums = snapshot / "SHA256SUMS"
+    checksums.write_text("\n".join(line for line in checksums.read_text().splitlines() if "images.tar.gz" not in line) + "\n")
+    subprocess.run(["sh", str(root / "ops/restore.sh"), stamp], env=env, check=True)
     assert client.get(f'/api/recipes/{rid}').json() == original_recipe
     assert client.get(f'/api/recipes/{rid}/image').content == original_image
     assert subprocess.run(['flock', '-n', str(backups / '.lock'), 'true']).returncode == 0

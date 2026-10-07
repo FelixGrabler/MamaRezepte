@@ -3,6 +3,7 @@
 set -eu
 BACKUP_ROOT=${BACKUP_ROOT:-/backups}
 UPLOAD_ROOT=${UPLOAD_ROOT:-/uploads}
+IMAGE_ROOT=${IMAGE_ROOT:-/images}
 PASSWORD_FILE=${PASSWORD_FILE:-/run/secrets/postgres_password}
 umask 077
 stamp=${1:?Snapshot name required}
@@ -14,9 +15,12 @@ flock -n 9 || { echo "Another backup or restore is running" >&2; exit 1; }
 (cd "$snapshot" && sha256sum -c SHA256SUMS)
 pg_restore --list "$snapshot/database.dump" >/dev/null
 tar -tzf "$snapshot/uploads.tar.gz" >/dev/null
+# Older snapshots predate the permanent-image archive.
+if [ -f "$snapshot/images.tar.gz" ]; then tar -tzf "$snapshot/images.tar.gz" >/dev/null; fi
 export PGPASSWORD="$(cat "$PASSWORD_FILE")"
 # Restore files before the database can reference them. Existing orphan files
 # may remain, but are inaccessible through the API without a recipe reference.
 tar -xzf "$snapshot/uploads.tar.gz" -C "$UPLOAD_ROOT"
+if [ -f "$snapshot/images.tar.gz" ]; then tar -xzf "$snapshot/images.tar.gz" -C "$IMAGE_ROOT"; fi
 pg_restore --clean --if-exists --no-owner --no-acl --single-transaction --exit-on-error --dbname="$PGDATABASE" "$snapshot/database.dump"
 echo "Restored $stamp"

@@ -27,6 +27,10 @@ class ApiService {
     session.user = await this.request('/auth/login', { method: 'POST', body: JSON.stringify(credentials) })
     session.revision++
   }
+  async register(credentials) {
+    session.user = await this.request('/auth/register', { method: 'POST', body: JSON.stringify(credentials) })
+    session.revision++
+  }
   async logout() {
     await this.request('/auth/logout', { method: 'POST' })
     session.user = null

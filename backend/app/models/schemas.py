@@ -45,3 +45,14 @@ class RecipeWrite(RecipeContent):
 class Credentials(BaseModel):
     username: str = Field(min_length=1, max_length=64, pattern=r"^[A-Za-z0-9_.-]+$")
     password: str = Field(min_length=1, max_length=128)
+
+
+class Registration(Credentials):
+    password: str = Field(min_length=8, max_length=72)
+
+    @field_validator('password')
+    @classmethod
+    def password_length(cls, value):
+        if len(value.encode('utf-8')) > 72:
+            raise ValueError('Bitte ein kürzeres Passwort verwenden.')
+        return value

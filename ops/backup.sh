@@ -2,6 +2,7 @@
 set -eu
 BACKUP_ROOT=${BACKUP_ROOT:-/backups}
 UPLOAD_ROOT=${UPLOAD_ROOT:-/uploads}
+IMAGE_ROOT=${IMAGE_ROOT:-/images}
 PASSWORD_FILE=${PASSWORD_FILE:-/run/secrets/postgres_password}
 umask 077
 mkdir -p "$BACKUP_ROOT"
@@ -29,7 +30,8 @@ pg_dump --format=custom --no-owner --no-acl --file="$stage/database.dump"
 # Images are immutable and retained after replacement/deletion, so every file
 # referenced by the database snapshot remains available while this archive runs.
 tar -czf "$stage/uploads.tar.gz" -C "$UPLOAD_ROOT" .
-(cd "$stage" && sha256sum database.dump uploads.tar.gz > SHA256SUMS)
+tar -czf "$stage/images.tar.gz" -C "$IMAGE_ROOT" .
+(cd "$stage" && sha256sum database.dump uploads.tar.gz images.tar.gz > SHA256SUMS)
 mv "$stage" "${BACKUP_ROOT}/$stamp"
 stage=""
 date +%s > "$BACKUP_ROOT/.last-success.tmp"

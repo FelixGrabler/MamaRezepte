@@ -1,14 +1,13 @@
 """Persistent recipe aggregates. Parts inherit access from their root recipe."""
-import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
 
-from sqlalchemy import Boolean, CheckConstraint, Float, ForeignKey, Integer, String, Text, UniqueConstraint, create_engine, event, select, text, update
+from sqlalchemy import Boolean, CheckConstraint, Float, ForeignKey, Integer, String, Text, UniqueConstraint, create_engine, event, select, text
 from sqlalchemy.engine import URL
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, sessionmaker
 
 from . import config
-from .catalogue import legacy_category
+from .schema import upgrade_schema
 
 
 class Base(DeclarativeBase):
@@ -19,7 +18,7 @@ class Recipe(Base):
     __tablename__ = "recipes"
     __table_args__ = (
         CheckConstraint("servings BETWEEN 1 AND 1000", name="recipe_servings_range"),
-        CheckConstraint("category IN ('Suppe', 'Hauptspeiße', 'Nachspeiße', 'Frühstück', 'sonstiges')", name="recipe_category"),
+        CheckConstraint("category IN ('Suppe', 'Hauptspeise', 'Nachspeise', 'Frühstück', 'sonstiges')", name="recipe_category"),
     )
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column(String(200))
@@ -90,50 +89,6 @@ def session():
         yield db
 
 
-def import_legacy(db):
-    """Import once in one transaction, preserving IDs and parent relationships."""
-    if db.get(Migration, "legacy-sqlite-v1"):
-        return
-    if not config.LEGACY_DATABASE.is_file():
-        raise RuntimeError("Legacy database missing. Mount recipes.db before first startup.")
-    if db.scalar(select(Recipe.id).limit(1)) is not None:
-        raise RuntimeError("Refusing to import into a nonempty database without a migration marker.")
-    legacy = sqlite3.connect(f"{config.LEGACY_DATABASE.resolve().as_uri()}?mode=ro", uri=True)
-    legacy.row_factory = sqlite3.Row
-    try:
-        rows = legacy.execute("SELECT * FROM recipes ORDER BY id").fetchall()
-        records = {}
-        for row in rows:
-            record = Recipe(id=row["id"], title=row["title"], instructions=row["instructions"],
-                            image_path=row["image_path"], is_public=True, position=row["id"],
-                            owner_username="felix", servings=4, category=legacy_category(row["id"]))
-            db.add(record)
-            records[record.id] = record
-        db.flush()
-        for row in rows:
-            records[row["id"]].parent_id = row["parent_id"]
-        for row in rows:
-            records[row["id"]].category = root_of(db, records[row["id"]]).category
-        for row in legacy.execute("SELECT * FROM ingredients ORDER BY id"):
-            db.add(Ingredient(id=row["id"], recipe_id=row["recipe_id"], amount=row["amount"],
-                              unit=row["unit"], ingredient=row["ingredient"]))
-        imported_tags = {row["id"]: {} for row in rows}
-        for row in legacy.execute("SELECT rt.recipe_id, t.name FROM recipe_tags rt JOIN tags t ON t.id=rt.tag_id"):
-            imported_tags[row["recipe_id"]][row["name"].casefold()] = row["name"]
-        for row in rows:
-            if row["parent_id"] is None:
-                imported_tags[row["id"]]["mama-rezept"] = "Mama-Rezept"
-            for key, name in imported_tags[row["id"]].items():
-                db.add(RecipeTag(recipe_id=row["id"], name=name, key=key))
-        db.flush()
-        if db.bind.dialect.name == "postgresql":
-            for table in ("recipes", "ingredients"):
-                db.execute(text(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE(MAX(id), 1), COUNT(*) > 0) FROM {table}"))
-        db.add(Migration(name="legacy-sqlite-v1"))
-    finally:
-        legacy.close()
-
-
 def init_database():
     config.UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     with engine.begin() as conn:
@@ -141,7 +96,7 @@ def init_database():
             conn.execute(text("SELECT pg_advisory_xact_lock(725321)"))
         Base.metadata.create_all(conn)
         with SessionLocal(bind=conn) as db:
-            import_legacy(db)
+            upgrade_schema(db)
             db.flush()
 
 
@@ -153,15 +108,6 @@ def root_of(db, recipe):
 
 def visible(recipe, user):
     return recipe.is_public or (user is not None and recipe.owner_id == user["id"])
-
-
-def bind_legacy_owner(user):
-    """Resolve the imported collection's reserved owner from a verified hub profile."""
-    if user["username"] != "felix":
-        return
-    with session() as db:
-        db.execute(update(Recipe).where(Recipe.owner_id.is_(None), Recipe.owner_username == "felix")
-                   .values(owner_id=user["id"]))
 
 
 def favourite_ids(db, user):

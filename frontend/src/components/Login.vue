@@ -8,6 +8,7 @@
       <p v-if="error" class="error" role="alert">{{ error }}</p>
       <button class="primary-button" :disabled="busy">{{ busy ? 'Anmelden…' : 'Anmelden' }}</button>
     </form>
+    <p>Noch kein Konto? <router-link :to="{ path: '/register', query: route.query }">Registrieren</router-link></p>
     <p>Mit einem Konto kannst du eigene Rezepte erstellen und private Rezepte speichern.</p>
   </section>
 </template>

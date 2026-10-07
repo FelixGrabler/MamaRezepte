@@ -142,7 +142,7 @@ def get_image(recipe_id: int, user=Depends(optional_user)):
             base = config.UPLOAD_DIR.resolve()
             path = (base / recipe.image_path.removeprefix("uploads/")).resolve()
         else:
-            base = config.LEGACY_IMAGES.resolve()
+            base = config.IMAGE_DIR.resolve()
             path = (base / recipe.image_path.removeprefix("images/")).resolve()
         if not path.is_relative_to(base) or not path.is_file():
             raise HTTPException(404, "Bild nicht gefunden.")

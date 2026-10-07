@@ -2,7 +2,7 @@
 import httpx
 from fastapi import Depends, HTTPException, Request
 
-from . import config, database
+from . import config
 
 
 def hub_request(method, path, **kwargs):
@@ -26,7 +26,6 @@ def optional_user(request: Request):
     if response.status_code != 200:
         raise HTTPException(503, "Die Anmeldung ist gerade nicht erreichbar.")
     user = response.json()
-    database.bind_legacy_owner(user)
     return user
 
 

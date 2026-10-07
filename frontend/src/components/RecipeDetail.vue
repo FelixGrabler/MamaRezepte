@@ -4,12 +4,15 @@
     <p v-if="loading" class="loading">Rezept wird geladen…</p>
     <p v-else-if="error" class="error" role="alert">{{ error }}</p>
     <article v-else-if="recipe" class="recipe-detail">
-      <div class="page-heading"><h1>{{ recipe.title }}</h1><span v-if="!recipe.is_public" class="privacy-badge">🔒 Nur für dich</span></div>
-      <div class="actions">
-        <router-link v-if="recipe.can_edit && !recipe.parent_id" class="primary-button" :to="`/recipe/${recipe.id}/edit`">Bearbeiten</router-link>
-        <button v-if="session.user && !recipe.parent_id" class="star-button" :class="{ starred: recipe.is_favourite }" :aria-pressed="recipe.is_favourite" :disabled="starBusy" @click="toggleFavourite">{{ recipe.is_favourite ? '★ Aus Favouriten entfernen' : '☆ Zu Favouriten hinzufügen' }}</button>
-        <button v-if="recipe.can_edit && !recipe.parent_id" class="danger-button" @click="confirmDelete = !confirmDelete">Löschen</button>
+      <div class="recipe-heading">
+        <h1>{{ recipe.title }}</h1>
+        <div class="actions">
+          <FavouriteStar v-if="session.user && !recipe.parent_id" :starred="recipe.is_favourite" :label="recipe.is_favourite ? 'Aus Favouriten entfernen' : 'Zu Favouriten hinzufügen'" :busy="starBusy" @toggle="toggleFavourite" />
+          <router-link v-if="recipe.can_edit && !recipe.parent_id" class="primary-button" :to="`/recipe/${recipe.id}/edit`">Bearbeiten</router-link>
+          <button v-if="recipe.can_edit && !recipe.parent_id" class="danger-button" @click="confirmDelete = !confirmDelete">Löschen</button>
+        </div>
       </div>
+      <span v-if="!recipe.is_public" class="privacy-badge">🔒 Nur für dich</span>
       <div v-if="confirmDelete" class="delete-confirm" role="alert">
         <p>Dieses Rezept und alle seine Teile wirklich löschen?</p>
         <button class="danger-button" :disabled="busy" @click="remove">Ja, löschen</button>
@@ -17,14 +20,15 @@
       </div>
       <p v-if="actionError" class="error" role="alert">{{ actionError }}</p>
       <div v-if="recipe.image_path" class="recipe-detail-image"><img :src="api.imageUrl(recipe)" :alt="recipe.title" /></div>
-      <router-link class="category-badge" :to="{ path: '/', query: { category: recipe.category } }">{{ recipe.category }}</router-link>
-      <div class="recipe-tags"><router-link v-for="tag in recipe.tags" :key="tag" class="tag" :to="{ path: '/', query: { tag } }">{{ tag }}</router-link></div>
+      <div class="recipe-meta">
+        <router-link class="category-badge" :to="{ path: '/', query: { category: recipe.category } }">{{ recipe.category }}</router-link>
+        <div class="recipe-tags"><router-link v-for="tag in recipe.tags" :key="tag" class="tag" :to="{ path: '/', query: { tag } }">{{ tag }}</router-link></div>
+      </div>
       <div class="portion-control" aria-label="Portionen einstellen">
         <label for="view-servings">Portionen</label>
         <button aria-label="Eine Portion weniger" :disabled="viewServings <= 1" @click="viewServings--">−</button>
         <input id="view-servings" :value="viewServings" @change="setServings" type="number" min="1" max="1000" step="1" />
         <button aria-label="Eine Portion mehr" :disabled="viewServings >= 1000" @click="viewServings++">+</button>
-        <button v-if="viewServings !== recipe.servings" class="secondary-button" @click="viewServings = recipe.servings">Zurück auf {{ recipe.servings }}</button>
       </div>
       <p class="field-help">Zutatenmengen für {{ viewServings }} Portionen. Ohne Mengenangabe bleiben Zutaten unverändert.</p>
       <section class="all-ingredients-section"><h2>Zutaten</h2>
@@ -45,6 +49,7 @@
 </template>
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import FavouriteStar from './FavouriteStar.vue'
 import { useRouter } from 'vue-router'
 import api, { session } from '../services/api'
 const props = defineProps(['id'])

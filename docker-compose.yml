@@ -28,8 +28,7 @@ services:
     secrets:
       - postgres_password
     volumes:
-      - ./backend/data/recipes.db:/app/data/recipes.db:ro
-      - ./frontend/public/data/images:/app/legacy-images:ro
+      - ./backend/images:/app/images:ro
       - recipe-uploads:/app/uploads
     depends_on:
       recipes-db:
@@ -77,6 +76,7 @@ services:
       - ./ops:/ops:ro
       - ${BACKUP_DIR:-./backups}:/backups
       - recipe-uploads:/uploads:ro
+      - ./backend/images:/images:ro
     depends_on:
       backend:
         condition: service_healthy

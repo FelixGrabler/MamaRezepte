@@ -7,7 +7,10 @@ import "./style.css";
 import Login from "./components/Login.vue";
 import RecipeEditor from "./components/RecipeEditor.vue";
 
+import Register from "./components/Register.vue";
+
 const routes = [
+  { path: "/register", component: Register },
   { path: "/", component: RecipeList },
   { path: "/favourites", component: RecipeList, props: { favourites: true } },
   { path: "/login", component: Login },

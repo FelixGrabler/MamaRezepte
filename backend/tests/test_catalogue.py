@@ -22,7 +22,7 @@ def test_felix_owns_and_can_configure_the_original_public_collection(client):
     assert original['can_edit'] is True and original['owner_id'] == 1003
     with db.session() as session:
         imported = session.scalars(select(db.Recipe).where(db.Recipe.id <= 88)).all()
-        assert len(imported) == 88 and all(recipe.owner_id == 1003 for recipe in imported)
+        assert len(imported) == 5 and all(recipe.owner_id == 1003 for recipe in imported)
     payload = writable(original)
     payload.update(category='Frühstück', tags=['Familie', 'Mama-Rezept'], servings=6)
     try:
@@ -57,7 +57,7 @@ def test_category_tags_filters_validation_and_portion_metadata(client, payload):
     assert rid not in [r['id'] for r in client.get('/api/recipes/', params=[('tags', 'vegetarisch'), ('tags', 'Fleisch')]).json()]
     assert all(r['category'] in CATEGORIES for r in client.get('/api/recipes/').json())
     assert 'Familienessen' in [tag['name'] for tag in client.get('/api/tags/').json()]
-    for field, value in [('category', 'Unbekannt'), ('servings', 0), ('servings', -1), ('servings', 1.5), ('servings', 1001), ('servings', True)]:
+    for field, value in [('category', 'Hauptspeiße'), ('category', 'Nachspeiße'), ('category', 'Unbekannt'), ('servings', 0), ('servings', -1), ('servings', 1.5), ('servings', 1001), ('servings', True)]:
         invalid = deepcopy(payload)
         invalid[field] = value
         assert client.post('/api/recipes/', json=invalid).status_code == 422
