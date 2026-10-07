@@ -1,334 +1,212 @@
+"""Persistent recipe aggregates. Parts inherit access from their root recipe."""
 import sqlite3
 from contextlib import contextmanager
-from typing import List, Dict, Any, Optional
-import os
-from .config import DATABASE_PATH
+from pathlib import Path
+
+from sqlalchemy import Boolean, CheckConstraint, Float, ForeignKey, Integer, String, Text, UniqueConstraint, create_engine, event, select, text, update
+from sqlalchemy.engine import URL
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, sessionmaker
+
+from . import config
+from .catalogue import legacy_category
 
 
-def init_database():
-    """Initialize the database with the required tables."""
-    os.makedirs(os.path.dirname(DATABASE_PATH), exist_ok=True)
-    with sqlite3.connect(DATABASE_PATH) as conn:
-        cursor = conn.cursor()
+class Base(DeclarativeBase):
+    pass
 
-        # Create recipes table
-        cursor.execute(
-            """
-            CREATE TABLE IF NOT EXISTS recipes (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                title TEXT NOT NULL,
-                instructions TEXT NOT NULL,
-                image_path TEXT,
-                parent_id INTEGER,
-                FOREIGN KEY (parent_id) REFERENCES recipes (id)
-            )
-            """
-        )
 
-        # Create ingredients table
-        cursor.execute(
-            """
-            CREATE TABLE IF NOT EXISTS ingredients (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                recipe_id INTEGER NOT NULL,
-                amount REAL,
-                unit TEXT,
-                ingredient TEXT NOT NULL,
-                FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
-            )
-            """
-        )
+class Recipe(Base):
+    __tablename__ = "recipes"
+    __table_args__ = (
+        CheckConstraint("servings BETWEEN 1 AND 1000", name="recipe_servings_range"),
+        CheckConstraint("category IN ('Suppe', 'Hauptspeiße', 'Nachspeiße', 'Frühstück', 'sonstiges')", name="recipe_category"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    title: Mapped[str] = mapped_column(String(200))
+    instructions: Mapped[str] = mapped_column(Text, default="")
+    image_path: Mapped[str | None] = mapped_column(Text)
+    parent_id: Mapped[int | None] = mapped_column(ForeignKey("recipes.id", ondelete="CASCADE"), index=True)
+    owner_id: Mapped[int | None] = mapped_column(Integer, index=True)
+    owner_username: Mapped[str | None] = mapped_column(String(64))
+    category: Mapped[str] = mapped_column(String(40), default="sonstiges", index=True)
+    servings: Mapped[int] = mapped_column(Integer, default=4)
+    is_public: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    position: Mapped[int] = mapped_column(Integer, default=0)
+    ingredients: Mapped[list["Ingredient"]] = relationship(cascade="all, delete-orphan", order_by="Ingredient.id")
+    tags: Mapped[list["RecipeTag"]] = relationship(cascade="all, delete-orphan", order_by="RecipeTag.name")
+    favourites: Mapped[list["Favourite"]] = relationship(cascade="all, delete-orphan")
+    parts: Mapped[list["Recipe"]] = relationship(cascade="all, delete-orphan", order_by="Recipe.position, Recipe.id")
 
-        # Create tags table
-        cursor.execute(
-            """
-            CREATE TABLE IF NOT EXISTS tags (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL UNIQUE
-            )
-            """
-        )
 
-        # Create recipe_tags junction table
-        cursor.execute(
-            """
-            CREATE TABLE IF NOT EXISTS recipe_tags (
-                recipe_id INTEGER NOT NULL,
-                tag_id INTEGER NOT NULL,
-                PRIMARY KEY (recipe_id, tag_id),
-                FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE,
-                FOREIGN KEY (tag_id) REFERENCES tags (id) ON DELETE CASCADE
-            )
-            """
-        )
+class Ingredient(Base):
+    __tablename__ = "ingredients"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    recipe_id: Mapped[int] = mapped_column(ForeignKey("recipes.id", ondelete="CASCADE"), index=True)
+    amount: Mapped[float | None] = mapped_column(Float)
+    unit: Mapped[str | None] = mapped_column(String(40))
+    ingredient: Mapped[str] = mapped_column(Text)
 
-        conn.commit()
+
+class RecipeTag(Base):
+    __tablename__ = "recipe_tags"
+    recipe_id: Mapped[int] = mapped_column(ForeignKey("recipes.id", ondelete="CASCADE"), primary_key=True)
+    name: Mapped[str] = mapped_column(String(60), primary_key=True)
+    key: Mapped[str] = mapped_column(String(60), index=True)
+    __table_args__ = (UniqueConstraint("recipe_id", "key"),)
+
+
+class Favourite(Base):
+    __tablename__ = "favourites"
+    user_id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    recipe_id: Mapped[int] = mapped_column(ForeignKey("recipes.id", ondelete="CASCADE"), primary_key=True)
+
+
+class Migration(Base):
+    __tablename__ = "migration_history"
+    name: Mapped[str] = mapped_column(String(100), primary_key=True)
+
+
+def build_engine():
+    url = config.DATABASE_URL or URL.create(
+        "postgresql+psycopg", username="recipes",
+        password=Path(config.DATABASE_PASSWORD_FILE).read_text().strip(),
+        host="recipes-db", database="recipes",
+    )
+    engine = create_engine(url, pool_pre_ping=True)
+    if engine.dialect.name == "sqlite":
+        @event.listens_for(engine, "connect")
+        def enable_foreign_keys(conn, _):
+            conn.execute("PRAGMA foreign_keys=ON")
+    return engine
+
+
+engine = build_engine()
+SessionLocal = sessionmaker(engine, expire_on_commit=False)
 
 
 @contextmanager
-def get_db_connection():
-    """Get a database connection with context management."""
-    conn = sqlite3.connect(DATABASE_PATH)
-    conn.row_factory = sqlite3.Row  # This allows us to access columns by name
+def session():
+    with SessionLocal.begin() as db:
+        yield db
+
+
+def import_legacy(db):
+    """Import once in one transaction, preserving IDs and parent relationships."""
+    if db.get(Migration, "legacy-sqlite-v1"):
+        return
+    if not config.LEGACY_DATABASE.is_file():
+        raise RuntimeError("Legacy database missing. Mount recipes.db before first startup.")
+    if db.scalar(select(Recipe.id).limit(1)) is not None:
+        raise RuntimeError("Refusing to import into a nonempty database without a migration marker.")
+    legacy = sqlite3.connect(f"{config.LEGACY_DATABASE.resolve().as_uri()}?mode=ro", uri=True)
+    legacy.row_factory = sqlite3.Row
     try:
-        yield conn
-    finally:
-        conn.close()
-
-
-def get_all_recipes() -> List[Dict[str, Any]]:
-    """Get all recipes with their ingredients."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-
-        # Get all recipes
-        cursor.execute(
-            """
-            SELECT id, title, instructions, image_path, parent_id
-            FROM recipes
-            ORDER BY title
-            """
-        )
-
-        rows = cursor.fetchall()
-
-        recipes = []
+        rows = legacy.execute("SELECT * FROM recipes ORDER BY id").fetchall()
+        records = {}
         for row in rows:
-            recipe = dict(row)
-
-            # Get ingredients for this recipe
-            cursor.execute(
-                """
-                SELECT amount, unit, ingredient
-                FROM ingredients
-                WHERE recipe_id = ?
-                ORDER BY id
-                """,
-                (recipe["id"],),
-            )
-
-            ingredients = []
-            for ing_row in cursor.fetchall():
-                ing_dict = dict(ing_row)
-                ingredients.append(ing_dict)
-
-            recipe["ingredients"] = ingredients
-
-            # Get tags for this recipe
-            cursor.execute(
-                """
-                SELECT t.name
-                FROM tags t
-                JOIN recipe_tags rt ON t.id = rt.tag_id
-                WHERE rt.recipe_id = ?
-                ORDER BY t.name
-                """,
-                (recipe["id"],),
-            )
-
-            tags = [tag["name"] for tag in cursor.fetchall()]
-            recipe["tags"] = tags
-
-            recipes.append(recipe)
-
-        return recipes
+            record = Recipe(id=row["id"], title=row["title"], instructions=row["instructions"],
+                            image_path=row["image_path"], is_public=True, position=row["id"],
+                            owner_username="felix", servings=4, category=legacy_category(row["id"]))
+            db.add(record)
+            records[record.id] = record
+        db.flush()
+        for row in rows:
+            records[row["id"]].parent_id = row["parent_id"]
+        for row in rows:
+            records[row["id"]].category = root_of(db, records[row["id"]]).category
+        for row in legacy.execute("SELECT * FROM ingredients ORDER BY id"):
+            db.add(Ingredient(id=row["id"], recipe_id=row["recipe_id"], amount=row["amount"],
+                              unit=row["unit"], ingredient=row["ingredient"]))
+        imported_tags = {row["id"]: {} for row in rows}
+        for row in legacy.execute("SELECT rt.recipe_id, t.name FROM recipe_tags rt JOIN tags t ON t.id=rt.tag_id"):
+            imported_tags[row["recipe_id"]][row["name"].casefold()] = row["name"]
+        for row in rows:
+            if row["parent_id"] is None:
+                imported_tags[row["id"]]["mama-rezept"] = "Mama-Rezept"
+            for key, name in imported_tags[row["id"]].items():
+                db.add(RecipeTag(recipe_id=row["id"], name=name, key=key))
+        db.flush()
+        if db.bind.dialect.name == "postgresql":
+            for table in ("recipes", "ingredients"):
+                db.execute(text(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), COALESCE(MAX(id), 1), COUNT(*) > 0) FROM {table}"))
+        db.add(Migration(name="legacy-sqlite-v1"))
+    finally:
+        legacy.close()
 
 
-def get_recipe_by_id(recipe_id: int) -> Optional[Dict[str, Any]]:
-    """Get a single recipe by ID with its ingredients."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-
-        # Get the recipe
-        cursor.execute(
-            """
-            SELECT id, title, instructions, image_path, parent_id
-            FROM recipes
-            WHERE id = ?
-            """,
-            (recipe_id,),
-        )
-
-        row = cursor.fetchone()
-        if not row:
-            return None
-
-        recipe = dict(row)
-
-        # Get ingredients for this recipe
-        cursor.execute(
-            """
-            SELECT amount, unit, ingredient
-            FROM ingredients
-            WHERE recipe_id = ?
-            ORDER BY id
-            """,
-            (recipe_id,),
-        )
-
-        ingredients = []
-        for ing_row in cursor.fetchall():
-            ing_dict = dict(ing_row)
-            ingredients.append(ing_dict)
-
-        recipe["ingredients"] = ingredients
-
-        # Get tags for this recipe
-        cursor.execute(
-            """
-            SELECT t.name
-            FROM tags t
-            JOIN recipe_tags rt ON t.id = rt.tag_id
-            WHERE rt.recipe_id = ?
-            ORDER BY t.name
-            """,
-            (recipe_id,),
-        )
-
-        tags = [tag["name"] for tag in cursor.fetchall()]
-        recipe["tags"] = tags
-
-        return recipe
+def init_database():
+    config.UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    with engine.begin() as conn:
+        if engine.dialect.name == "postgresql":
+            conn.execute(text("SELECT pg_advisory_xact_lock(725321)"))
+        Base.metadata.create_all(conn)
+        with SessionLocal(bind=conn) as db:
+            import_legacy(db)
+            db.flush()
 
 
-def create_recipe(
-    title: str,
-    instructions: str,
-    ingredients: List[Dict[str, Any]],
-    image_path: Optional[str] = None,
-    parent_id: Optional[int] = None,
-) -> int:
-    """Create a new recipe and return its ID."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-
-        # Insert the recipe
-        cursor.execute(
-            """
-            INSERT INTO recipes (title, instructions, image_path, parent_id)
-            VALUES (?, ?, ?, ?)
-            """,
-            (title, instructions, image_path, parent_id),
-        )
-
-        recipe_id = cursor.lastrowid
-        if recipe_id is None:
-            raise ValueError("Failed to create recipe")
-
-        # Insert ingredients
-        for ingredient in ingredients:
-            cursor.execute(
-                """
-                INSERT INTO ingredients (recipe_id, amount, unit, ingredient)
-                VALUES (?, ?, ?, ?)
-                """,
-                (
-                    recipe_id,
-                    ingredient.get("amount"),
-                    ingredient.get("unit"),
-                    ingredient["ingredient"],
-                ),
-            )
-
-        conn.commit()
-        return recipe_id
+def root_of(db, recipe):
+    while recipe.parent_id is not None:
+        recipe = db.get(Recipe, recipe.parent_id)
+    return recipe
 
 
-def delete_recipe(recipe_id: int) -> bool:
-    """Delete a recipe and its ingredients."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-
-        # Check if recipe exists
-        cursor.execute("SELECT id FROM recipes WHERE id = ?", (recipe_id,))
-        if not cursor.fetchone():
-            return False
-
-        # Delete the recipe (ingredients will be deleted due to CASCADE)
-        cursor.execute("DELETE FROM recipes WHERE id = ?", (recipe_id,))
-        conn.commit()
-        return True
+def visible(recipe, user):
+    return recipe.is_public or (user is not None and recipe.owner_id == user["id"])
 
 
-def get_all_tags() -> List[Dict[str, Any]]:
-    """Get all tags."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        cursor.execute("SELECT id, name FROM tags ORDER BY name")
-        return [dict(row) for row in cursor.fetchall()]
+def bind_legacy_owner(user):
+    """Resolve the imported collection's reserved owner from a verified hub profile."""
+    if user["username"] != "felix":
+        return
+    with session() as db:
+        db.execute(update(Recipe).where(Recipe.owner_id.is_(None), Recipe.owner_username == "felix")
+                   .values(owner_id=user["id"]))
 
 
-def create_tag(name: str) -> Optional[int]:
-    """Create a new tag and return its ID. Returns None if tag already exists."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute("INSERT INTO tags (name) VALUES (?)", (name,))
-            conn.commit()
-            return cursor.lastrowid
-        except sqlite3.IntegrityError:
-            return None  # Tag already exists
+def favourite_ids(db, user):
+    if user is None:
+        return set()
+    return set(db.scalars(select(Favourite.recipe_id).where(Favourite.user_id == user["id"])))
 
 
-def delete_tag(tag_id: int) -> bool:
-    """Delete a tag."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-
-        # Check if tag exists
-        cursor.execute("SELECT id FROM tags WHERE id = ?", (tag_id,))
-        if not cursor.fetchone():
-            return False
-
-        cursor.execute("DELETE FROM tags WHERE id = ?", (tag_id,))
-        conn.commit()
-        return True
+def serialize(recipe, user, favourites=frozenset()):
+    return dict(id=recipe.id, title=recipe.title, instructions=recipe.instructions,
+                parent_id=recipe.parent_id, image_path=recipe.image_path,
+                image_url=f"/api/recipes/{recipe.id}/image" if recipe.image_path else None,
+                owner_id=recipe.owner_id, owner_username=recipe.owner_username, is_public=recipe.is_public,
+                category=recipe.category, servings=recipe.servings,
+                is_favourite=recipe.id in favourites,
+                can_edit=user is not None and recipe.owner_id == user["id"],
+                ingredients=[dict(amount=i.amount, unit=i.unit, ingredient=i.ingredient) for i in recipe.ingredients],
+                tags=[t.name for t in sorted(recipe.tags, key=lambda tag: tag.key)], parts=[serialize(p, user, favourites) for p in recipe.parts])
 
 
-def add_tag_to_recipe(recipe_id: int, tag_id: int) -> bool:
-    """Add a tag to a recipe."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        try:
-            cursor.execute(
-                """
-                INSERT INTO recipe_tags (recipe_id, tag_id)
-                VALUES (?, ?)
-            """,
-                (recipe_id, tag_id),
-            )
-            conn.commit()
-            return True
-        except sqlite3.IntegrityError:
-            return False  # Relationship already exists
+def apply_content(record, payload):
+    record.title = payload.title
+    record.instructions = payload.instructions
+    record.ingredients = [Ingredient(**i.model_dump()) for i in payload.ingredients]
 
 
-def remove_tag_from_recipe(recipe_id: int, tag_id: int) -> bool:
-    """Remove a tag from a recipe."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        cursor.execute(
-            """
-            DELETE FROM recipe_tags
-            WHERE recipe_id = ? AND tag_id = ?
-            """,
-            (recipe_id, tag_id),
-        )
-        conn.commit()
-        return cursor.rowcount > 0
-
-
-def update_recipe_parent(recipe_id: int, parent_id: Optional[int]) -> bool:
-    """Update the parent_id of a recipe."""
-    with get_db_connection() as conn:
-        cursor = conn.cursor()
-        cursor.execute(
-            """
-            UPDATE recipes
-            SET parent_id = ?
-            WHERE id = ?
-            """,
-            (parent_id, recipe_id),
-        )
-        conn.commit()
-        return cursor.rowcount > 0
+def apply_recipe(record, payload, user):
+    apply_content(record, payload)
+    record.owner_id = user["id"]
+    record.owner_username = user["username"]
+    record.category = payload.category
+    record.servings = payload.servings
+    record.is_public = payload.is_public
+    existing = {tag.key: tag for tag in record.tags}
+    record.tags = [existing.get(name.casefold()) or RecipeTag(name=name, key=name.casefold()) for name in payload.tags]
+    parts = []
+    existing_parts = {child.id: child for child in record.parts}
+    for position, part in enumerate(payload.parts):
+        child = existing_parts[part.id] if part.id is not None else Recipe()
+        apply_content(child, part)
+        child.owner_id = user["id"]
+        child.owner_username = user["username"]
+        child.category = payload.category
+        child.servings = payload.servings
+        child.is_public = payload.is_public
+        child.position = position
+        parts.append(child)
+    record.parts = parts

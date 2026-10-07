@@ -1,44 +1,48 @@
-from fastapi import APIRouter, FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from app.api import recipes, tags
-from app.core import database
-from app.core.config import API_TITLE, API_VERSION, CORS_ORIGINS
+from contextlib import asynccontextmanager
 
-# Initialize the database
-database.init_database()
+from fastapi import APIRouter, FastAPI, Request
+from fastapi.responses import JSONResponse
+from sqlalchemy import text
 
-app = FastAPI(title=API_TITLE, version=API_VERSION)
+from app.api import auth, recipes, tags
+from app.core import config, database
 
-# Add CORS middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=CORS_ORIGINS,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
-# Mount the API under /api for the frontend and keep the legacy routes for
-# direct backend access.
-api_router = APIRouter(prefix="/api")
-api_router.include_router(recipes.router)
-api_router.include_router(tags.router)
+@asynccontextmanager
+async def lifespan(app):
+    database.init_database()
+    yield
 
-app.include_router(api_router)
+
+app = FastAPI(title=config.API_TITLE, version=config.API_VERSION, lifespan=lifespan)
+
+
+@app.middleware("http")
+async def protect_requests(request: Request, call_next):
+    # Require a matching browser origin for every state change, including login.
+    if request.method in {"POST", "PUT", "PATCH", "DELETE"}:
+        if request.headers.get("origin") != config.SITE_ORIGIN:
+            return JSONResponse({"detail": "Ungültiger Anfrageursprung."}, status_code=403)
+    response = await call_next(request)
+    if request.url.path.startswith(("/api/", "/recipes", "/tags")):
+        response.headers["Cache-Control"] = "private, no-store"
+        response.headers["Vary"] = "Cookie"
+    return response
+
+
+api = APIRouter(prefix="/api")
+api.include_router(auth.router)
+api.include_router(recipes.router)
+api.include_router(tags.router)
+app.include_router(api)
+# Legacy read URLs keep access checks; writes use the same authorization rules.
 app.include_router(recipes.router, include_in_schema=False)
 app.include_router(tags.router, include_in_schema=False)
 
 
-@app.get("/")
-async def root():
-    return {"message": "Mama Rezepte API"}
-
-
 @app.get("/health")
-async def health_check():
-    return {"status": "healthy"}
-
-
 @app.get("/api/health", include_in_schema=False)
-async def api_health_check():
+def health():
+    with database.engine.connect() as conn:
+        conn.execute(text("SELECT 1"))
     return {"status": "healthy"}

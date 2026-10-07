@@ -1,25 +1,16 @@
-.PHONY: up build down clean logs install
-
-# Start the application
+.PHONY: up build down clean logs install backup
 up:
-	docker-compose up backend frontend
-
-# Build Docker images
+	docker compose up -d --build
 build:
-	docker-compose build
-
-# Stop all containers
+	docker compose build
 down:
-	docker-compose down
-
-# Clean up containers and images
+	docker compose down
+# Preserve persistent recipe data even during cleanup.
 clean:
-	docker-compose down -v --rmi all
-
-# Show logs
+	docker compose down --rmi local
 logs:
-	docker-compose logs -f
-
-# Install frontend dependencies
+	docker compose logs -f
 install:
-	cd frontend && npm install
+	cd frontend && npm ci
+backup:
+	docker compose exec backup /bin/sh /ops/backup.sh

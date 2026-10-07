@@ -21,3 +21,11 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+# Persistent application data and credentials
+secrets/
+backups/
+.pytest_cache/
+.venv/
+backend/uploads/
+frontend/test-results/
+frontend/playwright-report/

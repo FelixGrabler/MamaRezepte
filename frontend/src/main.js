@@ -4,9 +4,15 @@ import App from "./App.vue";
 import RecipeList from "./components/RecipeList.vue";
 import RecipeDetail from "./components/RecipeDetail.vue";
 import "./style.css";
+import Login from "./components/Login.vue";
+import RecipeEditor from "./components/RecipeEditor.vue";
 
 const routes = [
   { path: "/", component: RecipeList },
+  { path: "/favourites", component: RecipeList, props: { favourites: true } },
+  { path: "/login", component: Login },
+  { path: "/new", component: RecipeEditor },
+  { path: "/recipe/:id/edit", component: RecipeEditor, props: true },
   { path: "/recipe/:id", component: RecipeDetail, props: true },
 ];
 
