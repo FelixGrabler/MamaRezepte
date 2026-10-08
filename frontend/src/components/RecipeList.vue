@@ -13,10 +13,13 @@
           </div>
           <fieldset v-if="availableTags.length" class="tag-filters">
             <legend>Tags</legend>
-            <label v-for="tag in availableTags" :key="tag" class="filter-tag" :class="{ selected: selectedTags.includes(tag) }"><input type="checkbox" v-model="selectedTags" :value="tag" />{{ tag }}</label>
+            <button v-for="tag in availableTags" :key="tag" type="button" class="filter-tag" :class="{ selected: tagState(tag) === 'included', excluded: tagState(tag) === 'excluded' }" :aria-label="tag" :aria-pressed="tagState(tag) !== 'neutral'" :aria-description="tagDescription(tag)" :title="tagDescription(tag)" @click="cycleTag(tag)">
+              <span class="filter-tag-state" aria-hidden="true">{{ tagState(tag) === 'included' ? '✓' : tagState(tag) === 'excluded' ? '−' : '+' }}</span><span class="filter-tag-name">{{ tag }}</span>
+            </button>
+            <p class="field-help">Einmal: einschließen · zweimal: ausschließen · dreimal: zurücksetzen.</p>
             <p v-if="selectedTags.length > 1" class="field-help">Rezepte müssen alle ausgewählten Tags enthalten.</p>
           </fieldset>
-          <button v-if="searchTerm || selectedCategory || selectedTags.length || onlyMine" class="secondary-button" @click="clearFilters">Filter zurücksetzen</button>
+          <button v-if="searchTerm || selectedCategory || selectedTags.length || excludedTags.length || onlyMine" class="secondary-button" @click="clearFilters">Filter zurücksetzen</button>
         </aside>
         <div class="recipe-results">
           <div v-if="loading" class="loading">Rezepte werden geladen…</div>
@@ -52,6 +55,19 @@ const recipes = ref([]), loading = ref(true), error = ref(''), starError = ref('
 const searchTerm = ref(''), onlyMine = ref(false)
 const selectedCategory = ref(categories.includes(route.query.category) ? route.query.category : '')
 const selectedTags = ref(Array.isArray(route.query.tag) ? route.query.tag : route.query.tag ? [route.query.tag] : [])
+const excludedTags = ref([])
+function hasTag(tags, tag) { return tags.some(t => tagKey(t) === tagKey(tag)) }
+function tagState(tag) { return hasTag(selectedTags.value, tag) ? 'included' : hasTag(excludedTags.value, tag) ? 'excluded' : 'neutral' }
+function tagDescription(tag) {
+  return { neutral: 'Neutral. Klicken zum Einschließen.', included: 'Eingeschlossen. Klicken zum Ausschließen.', excluded: 'Ausgeschlossen. Klicken zum Zurücksetzen.' }[tagState(tag)]
+}
+function cycleTag(tag) {
+  const state = tagState(tag)
+  selectedTags.value = selectedTags.value.filter(t => tagKey(t) !== tagKey(tag))
+  excludedTags.value = excludedTags.value.filter(t => tagKey(t) !== tagKey(tag))
+  if (state === 'neutral') selectedTags.value.push(tag)
+  if (state === 'included') excludedTags.value.push(tag)
+}
 const availableTags = computed(() => [...new Map(recipes.value.flatMap(recipe => recipe.tags).map(tag => [tagKey(tag), tag])).values()].sort((a, b) => a.localeCompare(b, 'de-AT')))
 function matches(recipe, term) {
   return recipe.title.toLowerCase().includes(term) || recipe.ingredients.some(i => i.ingredient.toLowerCase().includes(term)) || recipe.tags.some(t => t.toLowerCase().includes(term)) || recipe.parts.some(p => matches(p, term))
@@ -59,8 +75,9 @@ function matches(recipe, term) {
 const filteredRecipes = computed(() => recipes.value.filter(r =>
   (!props.favourites || r.is_favourite) && (!onlyMine.value || r.can_edit) &&
   (!selectedCategory.value || r.category === selectedCategory.value) &&
-  selectedTags.value.every(tag => r.tags.some(t => tagKey(t) === tagKey(tag))) && matches(r, searchTerm.value.toLowerCase())))
-function clearFilters() { searchTerm.value = ''; selectedCategory.value = ''; selectedTags.value = []; onlyMine.value = false }
+  selectedTags.value.every(tag => hasTag(r.tags, tag)) &&
+  !excludedTags.value.some(tag => hasTag(r.tags, tag)) && matches(r, searchTerm.value.toLowerCase())))
+function clearFilters() { searchTerm.value = ''; selectedCategory.value = ''; selectedTags.value = []; excludedTags.value = []; onlyMine.value = false }
 async function toggleFavourite(recipe) {
   starBusy.value.add(recipe.id)
   starError.value = ''

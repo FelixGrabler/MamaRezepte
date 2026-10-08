@@ -334,6 +334,10 @@ select { font: inherit; border: 1px solid #ccd0db; border-radius: 5px; padding: 
 .tag-filters legend { margin-bottom: .5rem; font-weight: 600; }
 .filter-tag { display: inline-flex; align-items: center; gap: .4rem; border: 1px solid #d9def4; border-radius: 20px; background: white; padding: .3rem .7rem; margin: .2rem .3rem .2rem 0; cursor: pointer; }
 .filter-tag.selected { background: #f0efff; border-color: #667eea; }
+.filter-tag { color: inherit; }
+.filter-tag-state { width: 1em; text-align: center; }
+.filter-tag.excluded { color: #a52020; background: #fff0f0; border-color: #e4b2b2; }
+.filter-tag.excluded .filter-tag-name { text-decoration: line-through; }
 .category-badge { display: inline-block; color: #384990; background: #eff1fc; border-radius: 5px; font-size: .85rem; padding: .2rem .5rem; margin-top: .5rem; text-decoration: none; }
 a.tag { text-decoration: none; }
 .tag-picker .tag { border: 0; }
